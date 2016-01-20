@@ -29,7 +29,7 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Change the file(s)
 * `git add`, `git commit`, `git rebase --continue`
 * Run `git format-patch v2015.8.3`
-* Move all `.patch` file to the package
+* Move all `.patch` files to the package
 * Build the package
 * Test the package
 * `git push -f` if tests pass
