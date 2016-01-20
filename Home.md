@@ -12,12 +12,24 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 
 ## Workflow
 
-### Apply a new patch to the 2015.8.3 package
+### Adding a new patch to the 2015.8.3 package
 * Checkout the `openSUSE-2015.8.3` branch
-* Apply the fix
+* Add the fix
 * Commit the fix
 * Run `git format-patch v2015.8.3`
 * Add the latest `.patch` file to the package
 * Build the package
 * Test the package
 * `git push` if tests pass
+
+### Changing an existing patch
+* Checkout the `openSUSE-2015.8.3` branch
+* `git rebase -i v2015.8.3` - this will open your `$EDITOR`
+* Change `pick` to `edit` of the patch you want to change - save and exit your editor
+* Change the file(s)
+* `git add`, `git commit`, `git rebase --continue`
+* Run `git format-patch v2015.8.3`
+* Move all `.patch` file to the package
+* Build the package
+* Test the package
+* `git push -f` if tests pass
