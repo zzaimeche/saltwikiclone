@@ -19,4 +19,7 @@ This allows me to update the `develop` branch of `openSUSE/salt` from `saltstack
 git checkout develop
 git pull upstream develop
 git push opensuse develop
+git push --tags opensuse develop
 ```
+
+The same goes for the `2015.8` branch, just replace `develop` with `2015.8` in the above commands.
