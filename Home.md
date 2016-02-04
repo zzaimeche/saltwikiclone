@@ -34,3 +34,17 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Build the package
 * Test the package
 * `git push -f` if tests pass
+
+### Upgrade to a new upstream release
+
+Example: New 2015.8.x release
+
+Assumptions:
+* Old openSUSE branch: `openSUSE-2015.8.3`, based on `v2015.8.3`
+* New release `v2015.8.4`
+* New openSUSE branch: `openSUSE-2015.8.4` based on `v2015.8.4`
+
+* `git pull upstream 2015.8`
+* `git checkout v2015.8.4`
+* `git checkout -b openSUSE-2015.8.4`
+* `git cherry-pick v2015.8.3..openSUSE-2015.8.3`
