@@ -44,8 +44,17 @@ Assumptions:
 * New release `v2015.8.4`
 * New openSUSE branch: `openSUSE-2015.8.4` based on `v2015.8.4`
 
+* `git checkout openSUSE-2015.8.3`
+  go to the `openSUSE-2015.8.3` branch
+
+* `git pull opensuse openSUSE-2015.8.3`
+  get up-to-date with the openSUSE patches
+
+* `git checkout 2015.8`
+  go to the `2015.8` branch
+
 * `git pull upstream 2015.8`
-   get the latest branch state from upstream
+  get the latest branch state from upstream
 
 * `git checkout v2015.8.4`
   place git HEAD to the upstream release tag
