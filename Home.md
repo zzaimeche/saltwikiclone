@@ -13,6 +13,11 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 
 ## Workflow
 
+### Request push access
+* Go to https://github.com/orgs/openSUSE/teams/salt
+* Press "Request to join"
+* As soon as your request is approved, you can continue with the steps below
+
 ### Adding a new patch to the 2015.8.3 package
 * Checkout the `openSUSE-2015.8.3` branch
 * Add the fix
