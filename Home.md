@@ -50,28 +50,28 @@ Assumptions:
 * New openSUSE branch: `openSUSE-2015.8.4` based on `v2015.8.4`
 
 * `git checkout openSUSE-2015.8.3`
-  go to the `openSUSE-2015.8.3` branch
+  to go to the `openSUSE-2015.8.3` branch
 
 * `git pull opensuse openSUSE-2015.8.3`
-  get up-to-date with the openSUSE patches
+  to get up-to-date with the openSUSE patches
 
 * `git checkout 2015.8`
-  go to the `2015.8` branch
+  to go to the `2015.8` branch
 
 * `git pull upstream 2015.8`
-  get the latest branch state from upstream
+  to get the latest branch state from upstream
 
 * `git checkout v2015.8.4`
-  place git HEAD to the upstream release tag
+  to place git HEAD to the upstream release tag
 
 * `git checkout -b openSUSE-2015.8.4`
-  create the new openSUSE release branch
+  to create the new openSUSE release branch
 
 * `git cherry-pick v2015.8.3..openSUSE-2015.8.3`
-  move all patches from the old openSUSE release branch to the new one
-  this will automagically detect patches that were merge upstream
-  you might run into conflicts if a openSUSE patch touches the same code area as an upstream commit
-  go fix this conflict, then `git add ...`, `git cherry-pick --continue` resp. `git cherry-pick --allow-empty`
+  to move all patches from the old openSUSE release branch to the new one.
+  This will automagically detect patches that were merge upstream.
+  You might run into conflicts if a openSUSE patch touches the same code area as an upstream commit.
+  Go fix these conflicts, then `git add ...`, `git cherry-pick --continue` resp. `git cherry-pick --allow-empty`
 
 * `git push opensuse openSUSE-2015.8.4`
-  pushes the new branch to opensuse
+  to push the new branch to opensuse
