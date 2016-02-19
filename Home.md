@@ -49,7 +49,8 @@ Assumptions:
 * New release `v2015.8.4`
 * New openSUSE branch: `openSUSE-2015.8.4` based on `v2015.8.4`
 
-* `git fetch upstream` to get your repo up-to-date
+* `git fetch upstream` to get your repo up-to-date compared to upstream
+* `git fetch opensuse` to get your repo up-to-date compared to openSUSE
 
 * `git checkout openSUSE-2015.8.3`
   to go to the `openSUSE-2015.8.3` branch
