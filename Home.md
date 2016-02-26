@@ -18,6 +18,7 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * :warning: Always try to keep patches merged to the upstream, if your patch is related to the source. If upstream does not likes the fix, try to find a compromise and try having no patches that aren't upstream. 
 * Patches do not need to be upstream, if they are related merely to the package (e.g. SUSE systemd scripts etc) and they do not need to be posted upstream.
 * Pick only the changes from the upstream that are verified and/or are really needed (e.g. required fix won't get in without related changes).
+* **Preferably** add patches only after they were already accepted upstream and passed all the checks they run themselves separately. This is not always the case, but keeps you at the safe side.
 
 ### Request push access
 * Go to https://github.com/orgs/openSUSE/teams/salt
