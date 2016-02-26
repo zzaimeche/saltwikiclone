@@ -1,4 +1,4 @@
-# openSUSE salt packaging
+# openSUSE Salt Packaging
 
 This repository tracks [upstream salt](https://github.com/saltstack/salt) and the patches for the [openSUSE salt package](https://build.opensuse.org/package/show/systemsmanagement:saltstack/salt).
 
@@ -12,6 +12,12 @@ See [here](https://github.com/openSUSE/salt/wiki/Git-.config-for-working-with-re
 The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits on the `openSUSE-2015.8.3` branch apply cleanly on the `salt-2015.8.3.tar.gz` release tarball.
 
 ## Workflow
+
+### Policies
+
+* :warning: Always try to keep patches merged to the upstream, if your patch is related to the source. If upstream does not likes the fix, try to find a compromise and try having no patches that aren't upstream. 
+* Patches do not need to be upstream, if they are related merely to the package (e.g. SUSE systemd scripts etc) and they do not need to be posted upstream.
+* Pick only the changes from the upstream that are verified and/or are really needed (e.g. required fix won't get in without related changes).
 
 ### Request push access
 * Go to https://github.com/orgs/openSUSE/teams/salt
