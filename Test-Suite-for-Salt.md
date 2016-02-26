@@ -16,7 +16,7 @@
 
 ## Working with the Salt Test Suite
 
-### Adding a test
+### Adding a Test
 
 In general, test are usually just a shell scripts. Technically, they can be as anything else that runs and reports [POSIX exit codes](http://www.tldp.org/LDP/abs/html/exitcodes.html), but _preferrably_ they should be just a shell scripts. The Salt Test suite is simply running these shell scripts one after another and stops immediately if there is an error.
 
@@ -26,9 +26,9 @@ To add a test is to add a shell script that can run (with `chmod +x`) and report
 * Add its full filename to the [`$SUITE/etc/progression`](https://github.com/isbm/salt-tester/blob/master/etc/progression) file. You can always comment it out, to disable the test while working on it.
 * Write or call an integration test. It depends what you are doing and most of the time you likely want to run a particular command on the minion and check its result.
 
-### Adding Unit Tests
+### Adding a Unit Test
 
-There are four main issues with the Salt Unit Tests:
+First of all, there are four main issues with the Salt Unit Tests:
 
 * Far not everything is covered with them.
 * Not everything is needed and not everything will pass through. For example, ZFS, ZPool, Cassandra, MacOS related tests etc.
@@ -36,6 +36,11 @@ There are four main issues with the Salt Unit Tests:
 * They aren't unit tests from its pure form most of the time, but actually an integration tests _as unit tests_.
 
 In order to full-fill the general policy of the testing (i.e. "should be always green"), there is a [_while list_](https://github.com/isbm/salt-tester/blob/master/etc/unit_tests) of the Unit Tests that are actually passing.
+
+Therefore, in order to add a Unit Test(s), please follow this procedure:
+
+* For a completely new Unit Test, i.e. new `yourgreat_test.py` has been added, you should specify it in the `$SUITE/etc/unit_tests` file as a Pythonic path. E.g. if you place your file as `$SALT/tests/unit/modules/yourgreat_test.py` then you should specify it as `unit.modules.yourgreat_test` and place it to the end of the related group, i.e if it is `unit.modules...` then keep it with "modules" etc. Follow the other examples of other Unit Tests.
+* For an existing Unit Test file and is already enabled (see above), just write a yet another Unit Test within that Python source.
 
 ### Running Test Suite
 
