@@ -56,4 +56,4 @@ When writing a script, be aware of the following pitfalls:
 
 * Salt is not always returns non-zero if there is actually an error. Take care of this in your script yourself. _NOTE: Place for improvement!_
 
-* Make sure your shell script is transferring the error code properly to the very end and does not yanks it in between. This is a common inconvenience and is often overlooked.
+* Make sure your shell script is transferring the error code properly to the very end and does not yanks it in between. This is a common inconvenience and is often overlooked. Typical rule: crash early.
