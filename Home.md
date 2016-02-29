@@ -20,6 +20,12 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Pick only the changes from the upstream that are verified and/or are really needed (e.g. required fix won't get in without related changes).
 * **Preferably** add patches only after they were already accepted upstream and passed all the checks they run themselves separately. This is not always the case, but keeps you at the safe side.
 
+### Submitting to build.opensuse.org
+
+* Only submit to `systemsmanagement:saltstack:testing/salt`
+* :warning: Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
+  (Yes, the `openSUSE:Factory` maintainers can introduce changes by themselves just to keep Factory working)
+
 ### Request push access
 * Go to https://github.com/orgs/openSUSE/teams/salt
 * Press "Request to join"
