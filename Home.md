@@ -32,20 +32,22 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Press "Request to join"
 * As soon as your request is approved, you can continue with the steps below
 
-### Adding a new patch to the 2015.8.3 package
+### An example adding a new patch to the 2015.8.3 package
 * Checkout the `openSUSE-2015.8.3` branch
-* Add the fix
-* Commit the fix
-* Run `git format-patch v2015.8.3`
+* Add the fix, using `cherry-pick` of the range from the corresponding upstream branch.
+* Commit the fix to the `openSUSE-2015.8.3` branch
+* Run `git format-patch v2015.8.3` against this **tag**
+* :warning: If you have more than one patch files appeared, squash them into one file, leaving all the commit messages as one big message. See "Changing an existing patch" part below.
 * Add the latest `.patch` file to the package
 * Build the package
 * Test the package
-* `git push` if tests pass
+* :warning: Perform the final `git push` **only** if package is built and all the tests passes!
 
 ### Changing an existing patch
 * Checkout the `openSUSE-2015.8.3` branch
-* `git rebase -i v2015.8.3` - this will open your `$EDITOR`
-* Change `pick` to `edit` of the patch you want to change - save and exit your editor
+* Run `git rebase -i v2015.8.3` — this will open your `$EDITOR`
+* In case to correct something within the commit, change `pick` to `edit` of the patch you want to change, then save and exit your editor
+* In case to merge many commits into one, use [`squash` technique](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html).
 * Change the file(s)
 * `git add`, `git commit`, `git rebase --continue`
 * Run `git format-patch v2015.8.3`
