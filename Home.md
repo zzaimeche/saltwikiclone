@@ -34,7 +34,7 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 
 ### An example adding a new patch to the 2015.8.3 package
 * Checkout the `openSUSE-2015.8.3` branch
-* Add the fix, using `cherry-pick` of the range from the corresponding upstream branch.
+* Add the fix, using `cherry-pick` of the range from the corresponding upstream branch. In case of conflicts (they usually are normal) fix them in place.
 * Commit the fix to the `openSUSE-2015.8.3` branch
 * Run `git format-patch v2015.8.3` against this **tag**
 * :warning: If you have more than one patch files appeared, squash them into one file, leaving all the commit messages as one big message. See "Changing an existing patch" part below.
@@ -54,7 +54,7 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Move all `.patch` files to the package
 * Build the package
 * Test the package
-* `git push -f` if tests pass
+* `git push -f` if tests passes. Pushing with `--force` is perfectly OK.
 
 ### Upgrade to a new upstream release
 
