@@ -1,6 +1,6 @@
 ## Salt Test Suite General Info
 
-[Test suite](https://github.com/isbm/salt-tester) runner is a workflow to perform all kind of covered **white list** tests for the [Salt package](https://build.opensuse.org/package/show/systemsmanagement:saltstack/salt) we maintain. The general idea is to have a verified mix-in of all kind of tests possible for the Salt:
+[Test suite](https://github.com/openSUSE/salt-tester) runner is a workflow to perform all kind of covered **white list** tests for the [Salt package](https://build.opensuse.org/package/show/systemsmanagement:saltstack/salt) we maintain. The general idea is to have a verified mix-in of all kind of tests possible for the Salt:
 
 * Integration tests
 * Unit Tests
