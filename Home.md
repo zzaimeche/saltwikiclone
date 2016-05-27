@@ -20,7 +20,7 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Keep patches local as long as they do not need to be posted upstream and are package-related, outside of the source code tarball.
 * Pick only the changes from the upstream that are verified and/or are really needed (e.g. required fix won't get in without related changes).
 * **Preferably** add patches only after they were already accepted upstream and passed all the checks they run themselves separately. This is not always the case, but keeps you at the safe side.
-* **Always** squash numerous patches per a topic, so you will end-up with just few physical patches in the package, instead of many.
+* **Always** squash patches per a topic. That is, **one patch (file) per one PR** please. Do not make few `.patch` files, related to the same problem.
 
 ### Submitting to build.opensuse.org
 
