@@ -81,8 +81,12 @@ Assumptions:
 * `git pull upstream 2015.8`
   to get the latest branch state from upstream
 
+* `git push opensuse 2015.8`
+  if it's a new upstream 'major release branch' not existing in opensuse yet
+
 * `git checkout v2015.8.4`
   to place git HEAD to the upstream release tag
+  if this fails, do another `git fetch`, this will import tags from the 2015.8 branch
 
 * `git checkout -b openSUSE-2015.8.4`
   to create the new openSUSE release branch
