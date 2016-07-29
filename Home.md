@@ -95,7 +95,9 @@ Assumptions:
   to move all patches from the old openSUSE release branch to the new one.
   This will automagically detect patches that were merge upstream.
   You might run into conflicts if a openSUSE patch touches the same code area as an upstream commit.
-  Go fix these conflicts, then `git add ...`, `git cherry-pick --continue` resp. `git cherry-pick --allow-empty`
+  Go fix these conflicts, then `git add ...`, `git cherry-pick --continue`.
+
+  **Don't** `git cherry-pick --allow-empty`, this will add empty commits. Rather do `git reset` followed by `git cherry-pick --continue`.
 
 * `git push opensuse openSUSE-2015.8.4`
   to push the new branch to opensuse
