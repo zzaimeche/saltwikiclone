@@ -22,11 +22,19 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * **Preferably** add patches only after they were already accepted upstream and passed all the checks they run themselves separately. This is not always the case, but keeps you at the safe side.
 * **Always** squash commits per a topic. That is, **one patch (file) per one PR** please. Do not make few `.patch` files, related to the same problem. Do not use `fixup` (discards the commit message), but `squash`. This way you will always keep the commit messages inside one big message of the patch, hence everyone can look up what happened and what commits were actually included. IOW, be verbose in commit messages, be sparse in physical files!
 
-### Submitting to build.opensuse.org
+## Package route on build.opensuse.org
+
+### Submitting an SR
 
 * Only submit to `systemsmanagement:saltstack:testing/salt`
 * :warning: Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
   (Yes, the `openSUSE:Factory` maintainers can introduce changes by themselves just to keep Factory working)
+
+### Accepting an SR
+
+* Never accept an SR right away after it was created. Always give enough time for verification of it.
+* If package had a non-Git route changes (e.g. changes to the `salt.spec` file), **always** contact other reviewers to take an additional look and decided whether such change is correct or not. Such changes are _not reflected_ in the Git history!
+
 
 ### Request push access
 * Go to https://github.com/orgs/openSUSE/teams/salt
