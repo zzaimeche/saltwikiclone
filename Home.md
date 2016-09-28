@@ -35,6 +35,7 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 * Never accept an SR right away after it was created. Always give enough time for verification of it.
 * If package had a non-Git route changes (e.g. changes to the `salt.spec` file), **always** contact other reviewers to take an additional look and decided whether such change is correct or not. Such changes are _not reflected_ in the Git history!
 
+## Git routine
 
 ### Request push access
 * Go to https://github.com/orgs/openSUSE/teams/salt
