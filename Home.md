@@ -24,11 +24,25 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 
 ## Package route on build.opensuse.org
 
+### Submitting patches
+
+Patches can be accepted by support team only when:
+  
+* There is a clear reproducer of the problem.  
+* Fix for it is upstream as a pull request that upstream discussed.
+
 ### Submitting an SR
 
 * Only submit to `systemsmanagement:saltstack:testing/salt`
 * :warning: Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
   (Yes, the `openSUSE:Factory` maintainers can introduce changes by themselves just to keep Factory working)
+
+Submit request can be valid only if :
+
+* All Rules from "Submitting patches" section above were satisfied
+* In case no direct access to the repository, patch was is proposed to https://github.com/openSUSE/salt as a PR, referring to the Upstream PR.
+
+:warning: Please do not discuss pull requests at https://github.com/openSUSE/salt as they already has supposed to be discussed at upstream.
 
 ### Accepting an SR
 
