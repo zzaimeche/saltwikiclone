@@ -29,7 +29,8 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 Patches can be accepted by support team only when:
   
 * There is a clear reproducer of the problem.  
-* Fix for it is upstream as a pull request that upstream discussed.
+* Fix for it is sent to upstream as a pull request
+* All discussions about it is happening with the upstream.
 
 ### Submitting an SR
 
