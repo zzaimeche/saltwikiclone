@@ -128,7 +128,7 @@ Assumptions:
   Sometimes, especially when changes are done upstream in the same area of code, it might happen that Git automagically resolves a conflict and produces an invalid patch, which contains only some parts of the original patch, and maybe it should no be applied.
   It's interesting to review all new patches in order to detect some inconsistency and if they are still applying.
 
-  If necessary, we could **drop** invalid patches with: `git rebase -i v2015.8.4` and marking them with **drop**
+  If necessary, we can **drop** invalid patches with: `git rebase -i v2015.8.4` and marking them with **drop**
 
 * `git push opensuse openSUSE-2015.8.4`
   to push the new branch to opensuse
