@@ -45,6 +45,18 @@ Submit request can be valid only if :
 
 :warning: Please do not discuss pull requests at https://github.com/openSUSE/salt as they already has supposed to be discussed at upstream.
 
+### Submitting to SLE
+
+:bomb: **WARNING: Current process is unstable, is subject to change!**
+
+Before [FATE#318875](https://fate.suse.com/318875) is implemented, procedure of submitting request for a final enterprise packages is as follows:
+
+1. Submit SR as always to [systemsmanagement:saltstack:products](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products/salt) for currently used version (2015.8.7) and [systemsmanagement:saltstack:products:next](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products:next/salt) for upcoming version (2015.8.12).
+
+2. After it got accepted, just re-submit the same package to the `SUSE:SLE-12:Update`.
+
+After [FATE#318875](https://fate.suse.com/318875) is applied, there will one only one single source where to submit requests and the second step above will not be needed anymore.
+
 ### Accepting an SR
 
 * Never accept an SR right away after it was created. Always give enough time for verification of it.
