@@ -13,4 +13,4 @@ The `openSUSE-2015.8.3` branch is based on the `v2015.8.3` upstream tag. Commits
 
 # Workflow
 
-See the [Workflow] page
+See the [Workflow](Workflow) page
