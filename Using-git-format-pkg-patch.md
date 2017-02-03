@@ -6,6 +6,24 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
 
 ### Procedure
 
-1. Checkout your package:
+1. Create your patches (example) in a new, empty sub-directory of your tracked package in the Git, say `/home/your/patches-from-git`:
+
+   `git-format-pkg-patch -f v2015.8.12`
+
+   This will create a set of patches, but without ordering numbers. You will find in the same directory a file, called `patches.orders.txt` which contains their ordering and applying within the `.spec` file. You can change its name with an option `-o`, if you like. The content of this file is fully working and is ready to be included into the `.spec` file, although still missing your [patch description](https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Type_1:_minimal_single-line_comment_in_spec_file), according to the guidelines.
+
+2. Checkout your package somewhere:
 
    `obs bco your:project:somewhere packagename`
+
+3. Update patches by one go:
+
+   `git-format-pkg-patch -u /home/your/patches-from-git/ -c`
+
+   This will replace existing patches with a new content, if needed. As well will add/remove patches that changed.
+
+4. Find pre-formatted changes for your `.changelog` in the file `patches.changes.txt`.
+
+5. Remix your patch ordering file so it will contain a proper patch descriptions:
+
+   `git-format-pkg-patch -s yourpackage.spec -o /home/your/patches-from-git/patches.orders.txt > changes.txt`
