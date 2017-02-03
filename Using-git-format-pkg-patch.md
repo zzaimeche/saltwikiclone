@@ -10,7 +10,14 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
 
    `git-format-pkg-patch -f v2015.8.12`
 
-   This will create a set of patches, but without ordering numbers. You will find in the same directory a file, called `patches.orders.txt` which contains their ordering and applying within the `.spec` file. You can change its name with an option `-o`, if you like. The content of this file is fully working and is ready to be included into the `.spec` file, although still missing your [patch description](https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Type_1:_minimal_single-line_comment_in_spec_file), according to the guidelines.
+   This will create a set of patches, but without ordering numbers. You will find in the same directory a file, called `patches.orders.txt` which contains their ordering and applying within the `.spec` file. You can change its name with an option `-o`, if you like. The content of this file is fully working and is ready to be included into the `.spec` file, although still missing your [patch description](https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Type_1:_minimal_single-line_comment_in_spec_file), according to the guidelines, e.g.:
+
+   ```
+   Patch1: fix-for-opensuse-specific-things.patch
+   Patch2: fix-for-sle-specific-things.patch
+   Patch3: fix-for-upstream-sources.patch
+   ```
+
 
 2. Checkout your package somewhere:
 
@@ -28,10 +35,11 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
 
    ```
    git-format-pkg-patch -s yourpackage.spec \
-                         -o /home/your/patches-from-git/patches.orders.txt > patches.described.txt
+                         -o /home/your/patches-from-git/patches.orders.txt \
+                         > patches.described.txt
    ```
 
-   Now the file `patches.described.txt` will contain the section that looks [according to the guidelines](https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Type_1:_minimal_single-line_comment_in_spec_file):
+   Now the file `patches.described.txt` will contain the section that looks [according to the guidelines](https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Type_1:_minimal_single-line_comment_in_spec_file), e.g.:
 
    ```
    # PATCH-FIX-OPENSUSE fix-for-opensuse-specific-things.patch bnc#123456
@@ -40,12 +48,6 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
    Patch2: fix-for-sle-specific-things.patch
    # PATCH-FIX-UPSTREAM fix-for-upstream-sources.patch bnc#123456
    Patch3: fix-for-upstream-sources.patch
-   # PATCH-FEATURE-OPENSUSE feature-for-opensuse-specific-things.patch bnc#123456
-   Patch4: feature-for-opensuse-specific-things.patch
-   # PATCH-FEATURE-SLE feature-for-sle-specific-things.patch bnc#123456
-   Patch5: feature-for-sle-specific-things.patch
-   # PATCH-FEATURE-UPSTREAM feature-for-upstream.patch bnc#123456
-   Patch6: feature-for-upstream.patch
    ```
 
 6. Open the [best editor](http://duenenhof-wilhelm.de/church/size.html) and replace the information from `patches.described.txt`.
