@@ -22,8 +22,30 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
 
    This will replace existing patches with a new content, if needed. As well will add/remove patches that changed.
 
-4. Find pre-formatted changes for your `.changelog` in the file `patches.changes.txt`.
+4. Find pre-formatted changes for your `.changelog` in the file `patches.changes.txt` what was removed, what was added and what was changed, if anything.
 
 5. Remix your patch ordering file so it will contain a proper patch descriptions:
 
-   `git-format-pkg-patch -s yourpackage.spec -o /home/your/patches-from-git/patches.orders.txt > changes.txt`
+   ```
+   git-format-pkg-patch -s yourpackage.spec \
+                         -o /home/your/patches-from-git/patches.orders.txt > patches.described.txt
+   ```
+
+   Now the file `patches.described.txt` will contain the section that looks [according to the guidelines](https://en.opensuse.org/openSUSE:Packaging_Patches_guidelines#Type_1:_minimal_single-line_comment_in_spec_file):
+
+   ```
+   # PATCH-FIX-OPENSUSE fix-for-opensuse-specific-things.patch bnc#123456
+   Patch1: fix-for-opensuse-specific-things.patch
+   # PATCH-FIX-SLE fix-for-sle-specific-things.patch bnc#123456
+   Patch2: fix-for-sle-specific-things.patch
+   # PATCH-FIX-UPSTREAM fix-for-upstream-sources.patch bnc#123456
+   Patch3: fix-for-upstream-sources.patch
+   # PATCH-FEATURE-OPENSUSE feature-for-opensuse-specific-things.patch bnc#123456
+   Patch4: feature-for-opensuse-specific-things.patch
+   # PATCH-FEATURE-SLE feature-for-sle-specific-things.patch bnc#123456
+   Patch5: feature-for-sle-specific-things.patch
+   # PATCH-FEATURE-UPSTREAM feature-for-upstream.patch bnc#123456
+   Patch6: feature-for-upstream.patch
+   ```
+
+6. Open the [best editor](http://duenenhof-wilhelm.de/church/size.html) and replace the information from `patches.described.txt`.
