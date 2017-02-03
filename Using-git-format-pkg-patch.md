@@ -50,4 +50,13 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
    Patch3: fix-for-upstream-sources.patch
    ```
 
-6. Open the [best editor](http://duenenhof-wilhelm.de/church/size.html) and replace the information from `patches.described.txt`.
+6. Open the [best editor](http://duenenhof-wilhelm.de/church/size.html) and replace the information in the `.spec` file from `patches.described.txt`, `patches.orders.txt` if you need anything.
+
+7. Update your `.changes` with the content of `patches.changes.txt`:
+
+   `osc vc`
+
+8. Finalise everything:
+
+   `osc addremove; osc commit`
+
