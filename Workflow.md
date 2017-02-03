@@ -19,6 +19,10 @@ Patches can be accepted by support team only when:
 * Fix for it is sent to upstream as a pull request
 * All discussions about it is happening with the upstream.
 
+### Preparing package
+
+You can do it all manually, if you like. However there is a [better way](Using-git-format-pkg-patch) that sucks less.
+
 ### Submitting an SR
 
 * Only submit to `systemsmanagement:saltstack:testing/salt`
