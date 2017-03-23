@@ -74,7 +74,7 @@ Anyone who missed to provide a proper test to his patch, owes a beer and [Schäu
 * Checkout the `openSUSE-2015.8.3` branch
 * Add the fix, using `cherry-pick` of the range from the corresponding upstream branch. In case of conflicts (they usually are normal) fix them in place.
 * Commit the fix to the `openSUSE-2015.8.3` branch
-* Run `git format-patch v2015.8.3` against this **tag**
+* For 2015.8 version run `git format-patch v2015.8.3` against this **tag**. For 2016.11 and ongoing, use [git-format-pkg-patch utility](https://github.com/openSUSE/salt/wiki/Using-git-format-pkg-patch)
 * :warning: If you have more than one patch files appeared, squash them into one file, leaving all the commit messages as one big message. See "Changing an existing patch" part below.
 * Add the latest `.patch` file to the package
 * Build the package
