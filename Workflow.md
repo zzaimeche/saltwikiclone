@@ -70,6 +70,8 @@ Anyone who missed to provide a proper test to his patch, owes a beer and [Schäu
 * Press "Request to join"
 * As soon as your request is approved, you can continue with the steps below
 
+If the URL above is not available for you, please first become a member of openSUSE organisation. If you _cannot_ push to the repository, you _must_ provide a pull request (PR)!
+
 ### An example adding a new patch to the 2015.8.3 package
 * Checkout the `openSUSE-2015.8.3` branch
 * Add the fix, using `cherry-pick` of the range from the corresponding upstream branch. In case of conflicts (they usually are normal) fix them in place.
