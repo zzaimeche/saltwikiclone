@@ -60,7 +60,7 @@ After [FATE#318875](https://fate.suse.com/318875) is applied, there will one onl
 * On _stress-less_ run, your patch **must** be covered with any of these type of tests and they **must** pass on Salt-Toaster or unit test run outside of it.
 * On _emergency_ run, security fixes or critical L3 that requires a response within a short time may be tested outside and a permanent test can be implemented shortly later after response has been given.
 
-:exclamation: In case you cannot provide a test for your patch or expect having no tests for some reasons, there must be a common agreement in the team that untested patch is accepted.
+:exclamation: In case you cannot provide a test for your patch or expect having no tests for some reasons, there **must** be a **common agreement** in the team that untested patch is accepted.
 
 ## Git routine
 
