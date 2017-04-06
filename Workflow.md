@@ -16,8 +16,10 @@
 Patches can be accepted by support team only when:
   
 * There is a clear reproducer of the problem.  
-* Fix for it is sent to upstream as a pull request
+* Fix for it is sent to upstream as a pull request to a corresponding branch.
 * All discussions about it is happening with the upstream.
+
+Note: no need to send the patch upstream to a branch, which is no longer supported by the upstream.
 
 ### Preparing package
 
