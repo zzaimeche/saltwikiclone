@@ -105,7 +105,13 @@ Check list accepting an SR:
 * On _stress-less_ run, your patch **must** be covered with any of these type of tests and they **must** pass on Salt-Toaster or unit test run outside of it.
 * On _emergency_ run, security fixes or critical L3 that requires a response within a short time may be tested outside and a permanent test can be implemented shortly later after response has been given.
 
-:exclamation: In case you cannot provide a test for your patch or expect having no tests for some reasons, there **must** be a **common agreement** in the team that untested patch is accepted.
+:exclamation: Your check-list, in case no test provided:
+
+- Why no test? ("I have no time", "I am too busy" — doesn't count)
+- How do we know your change doesn't break anything?
+- How do we know your change will not bring regressions in a future by disappearing over releases?
+- You have a good reason for it and you are going to explain it to the whole Support Team.
+- You **must** seek a **common agreement** in the team that untested patch is accepted.
 
 ## Git routine
 
