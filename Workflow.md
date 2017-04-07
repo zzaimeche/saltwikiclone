@@ -6,7 +6,7 @@ Yes, it is not simple. But you can do that if you would just follow the rules. :
 
 Read the [general policies](#policies) or jump to a specific role:
 
-- Joining the club for the first time?
+- [Joining the club](#joining) for the first time?
 - Submit a patch for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - [Add a test](#writing-salt-toaster-tests) for your patch
@@ -32,12 +32,11 @@ If you are a member of `salt-maintenance@` team, you should request push access:
 
 * Go to https://github.com/orgs/openSUSE/teams/salt
 * Press "Request to join"
-* As soon as your request is approved, you can proceed
+* As soon as your request is approved, you can [proceed further steps](#arrow_right-start-here)
 
-:warning: If the URL above is not available for you, please first become a member of openSUSE organisation. If you _cannot_ push to the repository, you _must_ provide a pull request (PR)!
+:information_source: If the URL above is not available for you, please first become a member of openSUSE organisation. If you _cannot_ push to the repository, you **must** provide a pull request (PR)!
 
-
-### Submitting patches
+# Submitting patches
 
 Patches can be accepted by support team only when:
   
@@ -47,9 +46,13 @@ Patches can be accepted by support team only when:
 
 Note: no need to send the patch upstream to a branch, which is no longer supported by the upstream.
 
-### Preparing package
+# Salt Packaging Concepts
 
-You can do it all manually, if you like. However there is a [better way](Using-git-format-pkg-patch) that sucks less.
+Salt package meets the requirements of being processed "SUSE traditional way", where patch files are inside the RPM source package. It is impossible do OBS/Git service trick, because the package **must** provide an original `.tar.gz` source tarball and apply patches _on top of it_. Therefore generating all-in-one tarball is _not an option_.
+
+Salt package may contain really a lot patches, that are tracked in the [openSUSE Salt GitHub repository](https://github.com/openSUSE/salt) in the corresponding branch. Patches are generated against a tag, that corresponds to the original released source tarball by the SaltStack.
+
+In order to bring OBS and GitHub so to speak "impedance mismatch", there is a [git-format-pkg-patch](Using-git-format-pkg-patch) tool that you'd _better_ to use, although it is absolutely optional.
 
 # Submitting an SR
 
