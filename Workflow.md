@@ -8,7 +8,7 @@ Read the [general policies](#policies) or jump to a specific role:
 
 - Submit a patch for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
-- Add a test for your patch
+- [Add a test](#writing-salt-toaster-tests) for your patch
 - Roll the entire version
 - [Accept SR](#accepting-an-sr) on OBS
 
