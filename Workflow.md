@@ -36,11 +36,19 @@ Note: no need to send the patch upstream to a branch, which is no longer support
 
 You can do it all manually, if you like. However there is a [better way](Using-git-format-pkg-patch) that sucks less.
 
-### Submitting an SR
+# Submitting an SR
 
-* Only submit to `systemsmanagement:saltstack:testing/salt`
-* :warning: Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
-  (Yes, the `openSUSE:Factory` maintainers can introduce changes by themselves just to keep Factory working)
+## Where
+There are three types of Salt package: production, next production and openSUSE. You should submit to all of them, **testing stage**:
+
+1. Production version [`systemsmanagement:saltstack:products:testing`](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products:testing/salt)
+2. Next production version: [`systemsmanagement:saltstack:products:next`](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products:next/salt)
+3. openSUSE version: [`systemsmanagement:saltstack:testing`](https://build.opensuse.org/project/show/systemsmanagement:saltstack:testing)
+
+:warning: Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
+(Yes, the `openSUSE:Factory` maintainers can introduce changes by themselves just to keep Factory working)
+
+## Submission
 
 Submit request can be valid only if :
 
@@ -51,15 +59,7 @@ Submit request can be valid only if :
 
 ### Submitting to SLE
 
-:bomb: **WARNING: Current process is unstable, is subject to change!**
-
-Before [FATE#318875](https://fate.suse.com/318875) is implemented, procedure of submitting request for a final enterprise packages is as follows:
-
-1. Submit SR as always to [systemsmanagement:saltstack:products](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products/salt) for currently used version (2015.8.7) and [systemsmanagement:saltstack:products:next](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products:next/salt) for upcoming version (2015.8.12).
-
-2. After it got accepted, just re-submit the same package to the `SUSE:SLE-12:Update`.
-
-After [FATE#318875](https://fate.suse.com/318875) is applied, there will one only one single source where to submit requests and the second step above will not be needed anymore.
+Corresponding package should be re-submit the same package to the `SUSE:SLE-NN:Update` (`SUSE:SLE-12:Update` at the moment).
 
 ### Accepting an SR
 
