@@ -1,5 +1,16 @@
 # Workflow
 
+## :arrow_right: Start here
+
+Read the [policies](#policies) or jump to a specific role:
+
+- Submit a patch for the package
+- [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
+- Add a test for your patch
+- Roll the entire version
+
+---------
+
 ## Policies
 
 * :warning: **Always** try to keep patches merged to the upstream, if your patch is related to the source. If upstream does not likes the fix, try to find a compromise and try having no patches that aren't upstream. 
