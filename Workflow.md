@@ -45,21 +45,19 @@ There are three types of Salt package: production, next production and openSUSE.
 2. Next production version: [`systemsmanagement:saltstack:products:next`](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products:next/salt)
 3. openSUSE version: [`systemsmanagement:saltstack:testing`](https://build.opensuse.org/project/show/systemsmanagement:saltstack:testing)
 
-:warning: Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
+**Factory:** Check `systemsmanagement:saltstack/salt` for changes introduced by `openSUSE:Factory`
 (Yes, the `openSUSE:Factory` maintainers can introduce changes by themselves just to keep Factory working)
 
-## Submission
+**SLE/ASM:** Corresponding package should be re-submit the same package to the `SUSE:SLE-NN:Update` (`SUSE:SLE-12:Update` at the moment).
 
-Submit request can be valid only if :
+## Patch validation
 
-* All Rules from "Submitting patches" section above were satisfied
-* In case no direct access to the repository, patch was is proposed to https://github.com/openSUSE/salt as a PR, referring to the Upstream PR.
+Before you submit your patch, this is your check-list:
 
-:warning: Please do not discuss pull requests at https://github.com/openSUSE/salt as they already has supposed to be discussed at upstream.
+1. All Rules from "Submitting patches" section above were satisfied
+2. Patch was is proposed to https://github.com/openSUSE/salt as a PR, referring to the Upstream PR and accepted into this Git repository by `salt-maintenance@` team.
 
-### Submitting to SLE
-
-Corresponding package should be re-submit the same package to the `SUSE:SLE-NN:Update` (`SUSE:SLE-12:Update` at the moment).
+:information_source: Pull requests at https://github.com/openSUSE/salt supposed to be discussed **only** with the upstream, unless they are SUSE-only (i.e. `salt.spec` file or similar).
 
 ### Accepting an SR
 
