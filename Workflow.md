@@ -2,7 +2,7 @@
 
 ## :arrow_right: Start here
 
-Read the [policies](#policies) or jump to a specific role:
+Read the [general policies](#policies) or jump to a specific role:
 
 - Submit a patch for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
