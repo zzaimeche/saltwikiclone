@@ -96,6 +96,8 @@ Check list accepting an SR:
 2. Verify if any changes to non-upstream code are correct. They are not tracked by Git!
 3. Verify if there was enough time for verification by others.
 
+**IMPORTANT: If any of this fails — do not accept the SR!!**
+
 :warning: If package had a non-Git route changes (e.g. changes to the `salt.spec` file), **always** contact other reviewers to take an additional look and decided whether such change is correct or not. Such changes are _not reflected_ in the Git history!
 
 # Writing [Salt-Toaster](https://github.com/openSUSE/salt-toaster) Tests
