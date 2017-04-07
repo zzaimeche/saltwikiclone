@@ -11,9 +11,13 @@ Read the [general policies](#policies) or jump to a specific role:
 - [Submit a patch](#submitting-patches) for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - [Add a test](#writing-salt-toaster-tests) for your patch
+- [Accept SR](#accepting-an-sr) on OBS
+
+Look at examples how to:
+
+- [Add a patch](#an-example-adding-a-new-patch-to-the-201583-package)
 - [Change a patch](#changing-an-existing-patch)
 - [Roll the entire version](#upgrade-to-a-new-upstream-release)
-- [Accept SR](#accepting-an-sr) on OBS
 
 ---------
 
