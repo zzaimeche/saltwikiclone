@@ -8,7 +8,7 @@ Read the [general policies](#policies) or jump to a specific role:
 
 - [Joining the club](#joining) for the first time?
 - [Learn about packaging concepts](#salt-packaging-concepts)
-- Submit a patch for the package
+- [Submit a patch](#submitting-patches) for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - [Add a test](#writing-salt-toaster-tests) for your patch
 - Roll the entire version
