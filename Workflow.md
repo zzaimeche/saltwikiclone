@@ -62,6 +62,8 @@ General requirements to the package:
 - All other noise, like bogus patch renames, commit IDs etc are _forbidden_.
 - Upstream as much as possible, keep SUSE-only things exceptionally in case upstream has no use of it.
 
+Ready? [**Go!**](Using-git-format-pkg-patch)
+
 # Submitting an SR
 
 ## Where
