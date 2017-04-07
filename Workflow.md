@@ -64,10 +64,15 @@ Before you submit your patch, this is your check-list:
 
 # Accepting an SR
 
-* **Never** accept an SR right away after it was created. Always give enough time for verification of it.
-* If package had a non-Git route changes (e.g. changes to the `salt.spec` file), **always** contact other reviewers to take an additional look and decided whether such change is correct or not. Such changes are _not reflected_ in the Git history!
+Check list accepting an SR:
 
-### Writing [Salt-Toaster](https://github.com/openSUSE/salt-toaster) Tests
+1. Verify if patch has been accepted and committed to the https://github.com/openSUSE/salt corresponding branch.
+2. Verify if any changes to non-upstream code are correct. They are not tracked by Git!
+3. Verify if there was enough time for verification by others.
+
+:warning: If package had a non-Git route changes (e.g. changes to the `salt.spec` file), **always** contact other reviewers to take an additional look and decided whether such change is correct or not. Such changes are _not reflected_ in the Git history!
+
+# Writing [Salt-Toaster](https://github.com/openSUSE/salt-toaster) Tests
 
 [Salt-Toaster](https://github.com/openSUSE/salt-toaster) tests are running integration real-life tests and unit tests. If you provided a patch, there must be at least one of those tests. A patch without a test means someone has to finish your job for you by adding one. Therefore:
 
