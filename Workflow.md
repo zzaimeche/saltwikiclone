@@ -6,6 +6,7 @@ Yes, it is not simple. But you can do that if you would just follow the rules. :
 
 Read the [general policies](#policies) or jump to a specific role:
 
+- Joining the club for the first time?
 - Submit a patch for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - [Add a test](#writing-salt-toaster-tests) for your patch
@@ -24,6 +25,17 @@ Read the [general policies](#policies) or jump to a specific role:
 * **Always** squash commits per a topic. That is, **one patch (file) per one PR** please. Do not make few `.patch` files, related to the same problem. Do not use `fixup` (discards the commit message), but `squash`. This way you will always keep the commit messages inside one big message of the patch, hence everyone can look up what happened and what commits were actually included. IOW, be verbose in commit messages, be sparse in physical files!
 
 ## Package route on build.opensuse.org
+
+# Joining
+
+If you are a member of `salt-maintenance@` team, you should request push access:
+
+* Go to https://github.com/orgs/openSUSE/teams/salt
+* Press "Request to join"
+* As soon as your request is approved, you can proceed
+
+:warning: If the URL above is not available for you, please first become a member of openSUSE organisation. If you _cannot_ push to the repository, you _must_ provide a pull request (PR)!
+
 
 ### Submitting patches
 
@@ -82,13 +94,6 @@ Check list accepting an SR:
 :exclamation: In case you cannot provide a test for your patch or expect having no tests for some reasons, there **must** be a **common agreement** in the team that untested patch is accepted.
 
 ## Git routine
-
-### Request push access
-* Go to https://github.com/orgs/openSUSE/teams/salt
-* Press "Request to join"
-* As soon as your request is approved, you can continue with the steps below
-
-:warning: If the URL above is not available for you, please first become a member of openSUSE organisation. If you _cannot_ push to the repository, you _must_ provide a pull request (PR)!
 
 ### An example adding a new patch to the 2015.8.3 package
 * Checkout the `openSUSE-2015.8.3` branch
