@@ -44,7 +44,7 @@ Patches can be accepted by Support Team only when:
 * There is a clear reproducer of the problem or a good reason to have it.  
 * Fix for it is sent to the upstream as a pull request to a corresponding branch and reviewed _there_ by the upstream developers.
 * All reviews and discussions about it should happen with the upstream and accepted there, **never** in openSUSE GitHub branch, unless test is missing or upstream no longer supports that branch.
-* [Test case is provided]((#writing-salt-toaster-tests)) (default). Exceptionally, if test case cannot be provided because of very serious/good reason, the support team **must** agree on it.
+* [Test case is provided]((#writing-salt-toaster-tests)) (default). Exceptionally, if test case cannot be provided because of a good reason, the support team **must** agree on it.
 
 Note: no need to send the patch upstream to a branch, which is no longer supported by the upstream.
 
