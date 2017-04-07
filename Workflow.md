@@ -1,4 +1,6 @@
-# Workflow
+# Salt Package Support Workflow
+
+Yes, it is not simple. But you can do that if you would just follow the rules. :smile: 
 
 ## :arrow_right: Start here
 
@@ -8,6 +10,7 @@ Read the [general policies](#policies) or jump to a specific role:
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - Add a test for your patch
 - Roll the entire version
+- [Accept SR](#accepting-an-sr) on OBS
 
 ---------
 
@@ -59,7 +62,7 @@ Before you submit your patch, this is your check-list:
 
 :information_source: Pull requests at https://github.com/openSUSE/salt supposed to be discussed **only** with the upstream, unless they are SUSE-only (i.e. `salt.spec` file or similar).
 
-### Accepting an SR
+# Accepting an SR
 
 * **Never** accept an SR right away after it was created. Always give enough time for verification of it.
 * If package had a non-Git route changes (e.g. changes to the `salt.spec` file), **always** contact other reviewers to take an additional look and decided whether such change is correct or not. Such changes are _not reflected_ in the Git history!
