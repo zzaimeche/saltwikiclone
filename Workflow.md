@@ -7,6 +7,7 @@ Yes, it is not simple. But you can do that if you would just follow the rules. :
 Read the [general policies](#policies) or jump to a specific role:
 
 - [Joining the club](#joining) for the first time?
+- [Learn about packaging concepts](#salt-packaging-concepts)
 - Submit a patch for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - [Add a test](#writing-salt-toaster-tests) for your patch
@@ -53,6 +54,13 @@ Salt package meets the requirements of being processed "SUSE traditional way", w
 Salt package may contain really a lot patches, that are tracked in the [openSUSE Salt GitHub repository](https://github.com/openSUSE/salt) in the corresponding branch. Patches are generated against a tag, that corresponds to the original released source tarball by the SaltStack.
 
 In order to bring OBS and GitHub so to speak "impedance mismatch", there is a [git-format-pkg-patch](Using-git-format-pkg-patch) tool that you'd _better_ to use, although it is absolutely optional.
+
+General requirements to the package:
+
+- Must provide consecutive changelog
+- Must have a minimal diff, where only real changes are reflected.
+- All other noise, like bogus patch renames, commit IDs etc are _forbidden_.
+- Upstream as much as possible, keep SUSE-only things exceptionally in case upstream has no use of it.
 
 # Submitting an SR
 
