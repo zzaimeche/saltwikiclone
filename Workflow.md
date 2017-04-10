@@ -100,8 +100,9 @@ Before you submit your patch, this is your check-list:
 Check list accepting an SR:
 
 1. Verify if patch has been accepted and committed to the https://github.com/openSUSE/salt corresponding branch.
-2. Verify if any changes to non-upstream code are correct. They are not tracked by Git!
-3. Verify if there was enough time for verification by others.
+2. Verify if patch contains a test (any).
+3. Verify if any changes to non-upstream code are correct. They are not tracked by Git!
+4. Verify if there was enough time for verification by others.
 
 **IMPORTANT: If any of this fails — do not accept the SR!!**
 
