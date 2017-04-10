@@ -23,14 +23,19 @@ Look at examples how to:
 
 ## Policies
 
-* :warning: **Always** try to keep patches merged to the upstream, if your patch is related to the source. If upstream does not likes the fix, try to find a compromise and try having no patches that aren't upstream. 
-* :warning: **Always** open Pull Requests for your fixes upstream and never on openSUSE branch. The openSUSE branch exists merely for the accepted-ready commits that were already discussed.
+* All source-related patches **must** be merged to the upstream.
+  * If upstream does not likes the fix, try to find a compromise and implement it differently to "get rid" of it. Your goal is to having no patches that aren't upstream.
+* Pull Requests for proposed fixes **must** be opened upstream and **never** here on openSUSE branch. 
+* This openSUSE branch exists merely for the accepted-ready commits that were already discussed.
+  * However, it also contains Pull Requests for upstream-unsupported versions.
 * Keep patches local as long as they do not need to be posted upstream and are package-related, outside of the source code tarball.
 * Pick only the changes from the upstream that are verified and/or are really needed (e.g. required fix won't get in without related changes).
-* **Preferably** add patches only after they were already accepted upstream and passed all the checks they run themselves separately. This is not always the case, but keeps you at the safe side.
-* **Always** squash commits per a topic. That is, **one patch (file) per one PR** please. Do not make few `.patch` files, related to the same problem. Do not use `fixup` (discards the commit message), but `squash`. This way you will always keep the commit messages inside one big message of the patch, hence everyone can look up what happened and what commits were actually included. IOW, be verbose in commit messages, be sparse in physical files!
-
-## Package route on build.opensuse.org
+* If there is no test, write one. Python Unit tests are sufficient most of the time.
+* *Recommended* to add patches only after they were already accepted upstream and passed all the checks they run themselves separately. This is not always the case, but keeps you on the safe side.
+* You **must** squash all commits per a fix to one patch. That is, **one patch (file) per one PR**.
+  * Do not make few `.patch` files, related to the same problem.
+  * Do not use `fixup` (discards the commit message), but `squash`. This way you will always keep the commit messages inside one big message of the patch, hence everyone can look up what happened and what commits were actually included.
+  * It is OK to have verbose descriptions.
 
 # Joining
 
