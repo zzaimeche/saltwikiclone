@@ -178,7 +178,7 @@ Assumptions:
 * `git pull upstream 2015.8`
   to get the latest branch state from upstream
 
-* `git push opensuse 2015.8`
+* `git push opensuse upstream/2015.8:refs/heads/2015.8`
   if it's a new upstream 'major release branch' not existing in opensuse yet
 
 * `git checkout v2015.8.4`
