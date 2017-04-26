@@ -21,7 +21,7 @@ So in order to package better, you can use **Git Packaging Tools** ([git src](ht
 
 2. Checkout your package somewhere:
 
-   `obs bco` [`your:project:somewhere`](https://github.com/openSUSE/salt/wiki/Workflow#where) `packagename`
+   `osc bco` [`your:project:somewhere`](https://github.com/openSUSE/salt/wiki/Workflow#where) `packagename`
 
 3. Update patches by one go:
 
