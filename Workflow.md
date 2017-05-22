@@ -122,7 +122,7 @@ Check list accepting an SR:
 
 :exclamation: Your check-list, in case no test provided:
 
-- Why no test? ("I have no time", "I am too busy" — doesn't count)
+- Why no test? ("I have no time", "I am too busy", "No fun, I need lots of time for it" — doesn't count, sorry)
 - How do we know your change doesn't break anything?
 - How do we know your change will not bring regressions in a future by disappearing over releases?
 - You have a good reason for it and you are going to explain it to the whole Support Team.
