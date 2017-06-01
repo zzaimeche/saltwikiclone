@@ -62,7 +62,7 @@ All _reviews and discussions_ about it should happen with the upstream and accep
 
 # Setting patch priority
 
-Patches are **always** referenced into SUSE Bugzilla:
+Patches are **always** referenced in SUSE Bugzilla:
 
 1. Found a bug? Fill the bug!
 2. Request a corresponding priority in Bugzilla.
