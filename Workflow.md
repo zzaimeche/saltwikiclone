@@ -8,6 +8,7 @@ Read the [general policies](#policies) or jump to a specific role:
 
 - [Joining the club](#joining) for the first time?
 - [Learn about packaging concepts](#salt-packaging-concepts)
+- [Setting patch priority](#setting-patch-priority)
 - [Submit a patch](#submitting-patches) for the package
 - [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 - [Add a test](#writing-salt-toaster-tests) for your patch
@@ -59,6 +60,15 @@ Note: no need to send the patch upstream to a branch, which is no longer support
 
 All _reviews and discussions_ about it should happen with the upstream and accepted there, **never** in openSUSE GitHub branch, unless test is missing or upstream no longer supports that branch.
 
+# Setting patch priority
+
+Patches are **always** referenced into SUSE Bugzilla:
+
+1. Found a bug? Fill the bug!
+2. Request a corresponding priority in Bugzilla.
+3. All patches are a referenced in Bugzilla
+
+**DO NOT OPEN PULL REQUESTS IN openSUSE/salt TRACKER!**
 
 # Salt Packaging Concepts
 
