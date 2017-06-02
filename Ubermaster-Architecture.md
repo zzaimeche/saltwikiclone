@@ -104,6 +104,7 @@ Because of the ability to operate multiple Child Masters, the Child Masters are 
 
 1. What else could be used except the Redis? See the references for _possible_ alternatives.
 2. Do we need an API in front of any case of #1 (Redis or something else)?
+3. How do we obsolete prepared data for a 3rd party app?
 
 ## References
 
