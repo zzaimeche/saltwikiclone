@@ -88,5 +88,14 @@ Figure below gives an example how such layout can be achieved:
 
 [[images/integration.png]]
 
-
 ## Opened Questions
+
+1. What else could be used except the Redis? See the references for _possible_ alternatives.
+2. Do we need an API in front of any case of #1 (Redis or something else)?
+
+## References
+
+1. Library for API in front of Redis: [http://python-rq.org](http://python-rq.org)
+2. OpenStack queue: [https://wiki.openstack.org/wiki/Zaqar](https://wiki.openstack.org/wiki/Zaqar)
+3. Distributed task queue: [http://www.celeryproject.org](http://www.celeryproject.org)
+4. Redis: [https://redis.io](https://redis.io)
