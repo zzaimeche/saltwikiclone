@@ -45,8 +45,24 @@ Minions can be connected to a multiple Master(s) machines. There are two ways of
 1. Hot-hot. Where everything is connected to everything. This allows high availability, but this doesn't scale.
 2. Random/selective. This allows a shard of minions from a general swamp to be connected to a different Master instance, this way reducing an amount of minions per a Master. However, the downside of this is that each Master needs to be operated separately.
 
-### Data Cycle Separation
+## Data Cycle Separation
 
+Salt between the meta-information about jobs done, it also can return a vast amount of data from the Minions. The data in this case is not understood as an information, but just a data for further processing by a 3rd party applications. The first bottleneck to solve is to make sure that the controlling information (i.e. commands and meta-data or a description) is separated from the payload returning response. First stays within ZMQ channel inside the Salt, the second is returned in a storage for _further processing_.
 
+On the figure below blue lines depicts a command information, and red means returning data of the performed results:
+
+[[images/10km.png]]
+
+- **Ubermaster** in this figure is a "master of masters", where "child master to ubermaster" is like "minion to master" relation. That would mean that "child masters" are nothing else but an extended Syndic Masters that can: 
+  - proxy-pass commands between the end minions and the Ubermaster.
+  - keep track which minion belongs to what child-master
+  - register minions
+  - provides standard Salt API and so the whole setup should be equally transparent to the existing one
+
+  In this scenario, child-master is a fully-automated instance and no manual work is expected to be done on it.
+
+- **"Logical set"** means that those components aren't physical, i.e. actually it can be more than one machine or node or an instance.
+
+- **"Queue, Key/Value"** (store) is a horizontally scalable component behind the necessary setup. For example, Redis. Concept currently does not shows how to secure such store component, Redis in particular. Because it might be some other implementation etc. As a possible solution, there could be a REST API over HTTPS with the authentication in front of such component with only one function `put`.
 
 ## Opened Questions
