@@ -76,5 +76,17 @@ As an example, the layout of the Key/Value store not necessary needs to be on an
 
 Such layout also is flexible for grouping minions, i.e. 1~N child masters per an organization or subnet etc.
 
+## 3rd Party Application Integration
+
+Any service or application that is going to integrate with this setup is either need to cope with the returned amount of data that sits in such Key/Value store as well as provide other 3rd party services to which minions are connected. In any case, integration of the _resulting data_ is not designed to be a realtime as it doesn't have to be. That said, 3rd party applications are essentially controlling/displaying entities, that have the following obligations:
+
+1. Schedule a command(s) across N amount of Minions
+2. Optionally define the time when this has to be done
+3. _At some point_ fetch already prepared data from the Key/Value store and empty it for the next iteration
+
+Figure below gives an example how such layout can be achieved:
+
+[[images/integration.png]]
+
 
 ## Opened Questions
