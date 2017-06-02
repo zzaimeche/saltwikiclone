@@ -20,6 +20,10 @@ Constantly growing number of managed machines will eventually grow up even more.
 
   Salt should not rely on a specific 3rd party application that becomes a direct dependency in order to perform data organising and handling, so it allows to build an infrastructures with desired components.
 
+- **Multitenancy support**
+
+  Salt should provide access to a different organizations under such setup and isolation between them.
+
 ## Full Process Data Limitations
 
 By "fully processed" it means that three kind of information data state went through the full circle. That is:
@@ -78,7 +82,7 @@ Figure below shows the layout of two such sets (Child-Master and corresponding a
 
 As an example, the layout of the Key/Value store not necessary needs to be on an isolated machines. Since it supposed to consist of a multiple instances/nodes, each node can run directly nearby the Child Master and so the 3rd party application can "talk" to a broker that connects to all of those instances. That said, amount of Child Masters equals to amount of Key/Value store scaled nodes behind such broker (not pictured on the figure above).
 
-Such layout also is flexible for grouping minions, i.e. 1~N child masters per an organization or subnet etc.
+Such layout also is flexible for grouping minions, i.e. 1~N child masters per an organization or subnet etc. Essentially, "child master" is not very much different from the existing Syndic. However, it still does not separates the data into a different channels and does not work fully transparent so the minion registration can be done in the control node.
 
 ## 3rd Party Application Integration
 
@@ -91,6 +95,10 @@ Any service or application that is going to integrate with this setup is either 
 Figure below gives an example how such layout can be achieved:
 
 [[images/integration.png]]
+
+## Multitenancy
+
+Because of the ability to operate multiple Child Masters, the Child Masters are _isolated_ from each other and do not have any connections in between. That said, they are not "talking" to each other, but can be in different LANs, subnets, Data Centers etc. That would allow to have a multi-tenant control node (Ubermaster) that would provide ACL for a different organization that would have an access to their minions as end-points.
 
 ## Opened Questions
 
