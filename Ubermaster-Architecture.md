@@ -65,4 +65,9 @@ On the figure below blue lines depicts a command information, and red means retu
 
 - **"Queue, Key/Value"** (store) is a horizontally scalable component behind the necessary setup. For example, Redis. Concept currently does not shows how to secure such store component, Redis in particular. Because it might be some other implementation etc. As a possible solution, there could be a REST API over HTTPS with the authentication in front of such component with only one function `put`.
 
+In such architecture, requesting data and meta-data are still returned back to the Master and thus to the Ubermaster via ZMQ as usual. However, the amount of such data is way smaller than usually, as the main returned content is **not** flowing through these channels between the Ubermaster and Master, although still returned between the Master and the Minion(s). The Child master returns such data to the key/value store instead. This allows to add as much as possible sets of "child-master + N minions" and each of such sets returns their data to a horizontally scalable Key/Value store.
+
+As an example, the layout of the Key/Value store not necessary needs to be on an isolated machines. Since it supposed to consist of a multiple instances/nodes, each node can run directly nearby the Child Master and so the 3rd party application can "talk" to a broker that connects to all of those instances. That said, amount of Child Masters equals to amount of Key/Value store scaled nodes behind such broker (not pictured on the figure above).
+
+
 ## Opened Questions
