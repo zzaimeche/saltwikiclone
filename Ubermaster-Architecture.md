@@ -2,7 +2,7 @@
 
 A typical enterprise Data Center (DC) is driven by the [ITSM Change Management](https://en.wikipedia.org/wiki/Change_management_(ITSM)) with a careful planning of the infrastructure. An overview to get the idea how typically services are built at Architecture and Change Management and how process looks like, can be found on [Open Group Portal (PDF)](http://www.opengroup.org/architecture/0404brus/presents/rajesh/aandc1.pdf).
 
-Constantly growing number of managed machines will eventually grow up even more. Therefore Salt is required to handle a vast amount of machines, while meet the requirements for a typical DC run.
+Constantly growing number of managed machines will eventually grow up even more. Therefore Salt is required to handle a vast amount of machines, while meet the requirements for a typical DC run. Due to the nature of various SUSE products, at least the following specifications needs to be met:
 
 - **Change the configuration on the machines within a certain period of time.**
   
@@ -14,7 +14,7 @@ Constantly growing number of managed machines will eventually grow up even more.
 
 - **Allow horizontal scalability into a grid/cluster**
 
-  Horizontal scalability allows to add more machine nodes that aren't necessary very powerful, as it is done in vertical scalability by adding more hardware. Grid layout would allow to certain vital points stay available after the impacts.
+  Horizontal scalability allows to add more machine nodes that aren't necessary very powerful, as it is done in vertical scalability by adding more hardware. Grid layout would allow to certain vital points stay available after the impacts. In general, we should aim to be able to handle "infinite" amount of minions, where limits would be only hardware.
 
 - **Be 3rd party app agnostic in doing previous requirements**
 
