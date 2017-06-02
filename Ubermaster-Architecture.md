@@ -32,5 +32,17 @@ With only one Master, Salt hits the limits of amount of machines that can be ful
 
 ## Conceptual Architecture
 
+As in any grid/cluster solutions, the complexity needs to be separated into a smaller parts.
+
+### Master-Minion
+
+Each Master machine has its limits to the certain amount of Minions. However, these limits are not static, are different from case to case and are not permanent. E.g., a Mainframe can be slower than a Raspberry Pi machine, because it "decided so" at _the moment_. But a server can perform slower on IO but faster on CPU and vice versa.
+
+### Logical Master (or Multi-Master)
+
+Minions can be connected to a multiple Master(s) machines. There are two ways of doing it:
+
+1. Hot-hot. Where everything is connected to everything. This allows high availability, but this doesn't scale.
+2. Random/selective. This allows a shard of minions from a general swamp to be connected to a different Master instance, this way reducing an amount of minions per a Master. However, the downside of this is that each Master needs to be operated separately.
 
 ## Opened Questions
