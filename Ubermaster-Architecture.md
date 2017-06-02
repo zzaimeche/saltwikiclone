@@ -45,4 +45,8 @@ Minions can be connected to a multiple Master(s) machines. There are two ways of
 1. Hot-hot. Where everything is connected to everything. This allows high availability, but this doesn't scale.
 2. Random/selective. This allows a shard of minions from a general swamp to be connected to a different Master instance, this way reducing an amount of minions per a Master. However, the downside of this is that each Master needs to be operated separately.
 
+### Data Cycle Separation
+
+
+
 ## Opened Questions
