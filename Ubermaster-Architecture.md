@@ -45,6 +45,10 @@ Minions can be connected to a multiple Master(s) machines. There are two ways of
 1. Hot-hot. Where everything is connected to everything. This allows high availability, but this doesn't scale.
 2. Random/selective. This allows a shard of minions from a general swamp to be connected to a different Master instance, this way reducing an amount of minions per a Master. However, the downside of this is that each Master needs to be operated separately.
 
+### 3rd Party Applications or Services
+
+The amount of prepared data from Salt for such applications and service is a problem of those applications and services. Salt should _not take care_ if an application is about to collapse, because it is incapable to process prepared data. Solution to this: scale that application. However, Salt _must_ take care of stale/obsolete prepared data and swipe it away if it gets old, so the storage buffer stays always fresh.
+
 ## Data Cycle Separation
 
 Salt between the meta-information about jobs done, it also can return a vast amount of data from the Minions. The data in this case is not understood as an information, but just a data for further processing by a 3rd party applications. The first bottleneck to solve is to make sure that the controlling information (i.e. commands and meta-data or a description) is separated from the payload returning response. First stays within ZMQ channel inside the Salt, the second is returned in a storage for _further processing_.
