@@ -53,7 +53,7 @@ On the figure below blue lines depicts a command information, and red means retu
 
 [[images/10km.png]]
 
-- **Ubermaster** in this figure is a "master of masters", where "child master to ubermaster" is like "minion to master" relation. That would mean that "child masters" are nothing else but an extended Syndic Masters that can: 
+- **Ubermaster** in this figure is a control centre, a "master of masters", where "child master to ubermaster" is like "minion to master" relation. That would mean that "child masters" are nothing else but an extended Syndic Masters that can: 
   - proxy-pass commands between the end minions and the Ubermaster.
   - keep track which minion belongs to what child-master
   - register minions
@@ -67,7 +67,14 @@ On the figure below blue lines depicts a command information, and red means retu
 
 In such architecture, requesting data and meta-data are still returned back to the Master and thus to the Ubermaster via ZMQ as usual. However, the amount of such data is way smaller than usually, as the main returned content is **not** flowing through these channels between the Ubermaster and Master, although still returned between the Master and the Minion(s). The Child master returns such data to the key/value store instead. This allows to add as much as possible sets of "child-master + N minions" and each of such sets returns their data to a horizontally scalable Key/Value store.
 
+
+Figure below shows the layout of two such sets (Child-Master and corresponding a swamp of minions):
+
+[[images/many.png]]
+
 As an example, the layout of the Key/Value store not necessary needs to be on an isolated machines. Since it supposed to consist of a multiple instances/nodes, each node can run directly nearby the Child Master and so the 3rd party application can "talk" to a broker that connects to all of those instances. That said, amount of Child Masters equals to amount of Key/Value store scaled nodes behind such broker (not pictured on the figure above).
+
+Such layout also is flexible for grouping minions, i.e. 1~N child masters per an organization or subnet etc.
 
 
 ## Opened Questions
