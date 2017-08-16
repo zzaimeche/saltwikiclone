@@ -64,7 +64,7 @@ All _reviews and discussions_ about it should happen with the upstream and accep
 
 Patches are **always** referenced in SUSE Bugzilla:
 
-1. Found a bug? Fill the bug!
+1. Found a bug? File the bug!
 2. Request a corresponding priority in Bugzilla.
 3. All patches are a referenced in Bugzilla
 
