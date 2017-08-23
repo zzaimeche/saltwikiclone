@@ -50,7 +50,13 @@ If you are a member of `salt-maintenance@` team, you should request push access:
 
 # Submitting patches
 
-An accepted patch is a patch, that is committed in the openSUSE Salt Git repository. Patche can be accepted by Support Team only when:
+Patches are always cherry-picked by Support Team from the upstream from a corresponding version. To submit a patch, please:
+
+* Open a bug in Bugzilla
+* Describe what it does
+* Reference an upstream PR
+
+An "accepted patch" is a patch, that is committed in the openSUSE Salt Git repository. Patches can be accepted by Support Team only when:
 
 * There is a clear reproducer of the problem or a good reason to have it (bugfix, security issue etc).
 * Fix for it is in the upstream and reviewed _there_ by the upstream developers.
