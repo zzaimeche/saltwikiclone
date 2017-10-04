@@ -55,6 +55,7 @@ Patches are always cherry-picked from the upstream from a corresponding version.
 * Open a bug in Bugzilla
 * Describe what it does
 * Reference an upstream PR
+* [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 
 An "accepted patch" is a patch, that is committed in the openSUSE Salt Git repository. Patches can be accepted by Support Team only when:
 
