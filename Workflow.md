@@ -50,7 +50,7 @@ If you are a member of `salt-maintenance@` team, you should request push access:
 
 # Submitting patches
 
-Patches are always cherry-picked by Support Team from the upstream from a corresponding version. To submit a patch, please:
+Patches are always cherry-picked from the upstream from a corresponding version. To submit a patch, please:
 
 * Open a bug in Bugzilla
 * Describe what it does
