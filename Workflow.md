@@ -53,8 +53,8 @@ If you are a member of `salt-maintenance@` team, you should request push access:
 Patches are always cherry-picked from the upstream from a corresponding version. To submit a patch, please:
 
 * Open a bug in Bugzilla
-* Describe what it does
-* Reference an upstream PR
+* In the bug, describe what your patch does and how
+* In the bug, reference an upstream PR
 * [Send a Submit Request (SR)](#submitting-an-sr) of prepared package
 
 An "accepted patch" is a patch, that is committed in the openSUSE Salt Git repository. Patches can be accepted by Support Team only when:
@@ -63,9 +63,9 @@ An "accepted patch" is a patch, that is committed in the openSUSE Salt Git repos
 * Fix for it is in the upstream and reviewed _there_ by the upstream developers.
 * [Test case is provided](#writing-salt-toaster-tests) (default). Exceptionally, if test case cannot be provided because of a good reason, the support team **must** agree on it.
 
-Note: no need to send the patch upstream to a branch, which is no longer supported by the upstream.
+All _reviews and discussions_ about the patch and PR should happen with the upstream and accepted there, **never** in openSUSE GitHub branch, unless test is missing or upstream no longer supports that branch.
 
-All _reviews and discussions_ about it should happen with the upstream and accepted there, **never** in openSUSE GitHub branch, unless test is missing or upstream no longer supports that branch.
+In case your patch is against upstream-unsupported version, open a PR in openSUSE GitHub branch and discuss it there.
 
 # Setting patch priority
 
