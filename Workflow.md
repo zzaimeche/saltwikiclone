@@ -65,7 +65,7 @@ An "accepted patch" is a patch, that is committed in the openSUSE Salt Git repos
 
 All _reviews and discussions_ about the patch and PR should happen with the upstream and accepted there, **never** in openSUSE GitHub branch, unless test is missing or upstream no longer supports that branch.
 
-In case your patch is against upstream-unsupported version, open a PR in openSUSE GitHub branch and discuss it there.
+:point_right: In case your patch is against upstream-unsupported version, open a PR in openSUSE GitHub branch and discuss it there.
 
 # Setting patch priority
 
