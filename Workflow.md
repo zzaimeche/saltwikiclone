@@ -61,7 +61,7 @@ An "accepted patch" is a patch, that is committed in the openSUSE Salt Git repos
 
 * There is a clear reproducer of the problem or a good reason to have it (bugfix, security issue etc).
 * Fix for it is in the upstream and reviewed _there_ by the upstream developers.
-* [Test case is provided](#writing-salt-toaster-tests) (default). Exceptionally, if test case cannot be provided because of a good reason, the support team **must** agree on it.
+* [Test case is provided](#writing-salt-toaster-tests) (default). Exceptionally, if test case cannot be provided because of a good reason, the support team **must** agree on it (hint: we don't, most of the time :smiley:).
 
 All _reviews and discussions_ about the patch and PR should happen with the upstream and accepted there, **never** in openSUSE GitHub branch, unless test is missing or upstream no longer supports that branch.
 
