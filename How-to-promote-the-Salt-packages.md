@@ -10,10 +10,13 @@ Once the Salt toaster results are looking GREEN on Jenkins, the following packag
 ----
 
 We should always check if diff (changes to be promoted) is correct and expected:
+
 ```bash
 # Example of how show changes that are going to be promoted
 
 $ osc rdiff systemsmanagement:saltstack:products salt systemsmanagement:saltstack:products:testing
+$ osc rdiff systemsmanagement:saltstack:products py26-compat-salt systemsmanagement:saltstack:products:testing
+$ osc rdiff systemsmanagement:saltstack:products:old salt systemsmanagement:saltstack:products:old:testing
 ```
 
 Then we can promote the packages:
