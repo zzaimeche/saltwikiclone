@@ -15,7 +15,8 @@ py-spy --nonblocking --pid $PID --flame output.svg --duration 10
 
 Installation can be done via pip or cargo, a quick and dirty way in SUSE distros is:
 
+```bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 pip install py-spy
-
+```
