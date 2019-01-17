@@ -39,4 +39,4 @@ The `openSUSE-2015.8.12` branch is based on the `v2015.8.12` upstream tag. Commi
 See the [Workflow](Workflow) page
 
 # Tooling
- * [py-spy](py-spy)
+ * Profiling: [py-spy](py-spy)
