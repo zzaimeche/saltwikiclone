@@ -30,7 +30,7 @@ $ osc rdiff systemsmanagement:saltstack:products:old salt systemsmanagement:salt
 
 Then we can promote the packages.
 
-**Warning: :warning: `osc copypac` has swapped parameters with `osc rdiff`, so do not just replace `rdiff` with `copypac`!!! :warning: **
+:warning: **`osc copypac` CLI syntax has swapped parameters with `osc rdiff`, so do not just replace `rdiff` with `copypac`!** :warning:
 
 ```bash
 # Example of how packages should be promoted
