@@ -28,12 +28,12 @@ $ osc rdiff systemsmanagement:saltstack:products py26-compat-salt systemsmanagem
 $ osc rdiff systemsmanagement:saltstack:products:old salt systemsmanagement:saltstack:products:old:testing
 ```
 
-Then we can promote the packages:
+Then we can promote the packages.
+
+**Warning: :warning: `osc copypac` has swapped parameters with `osc rdiff`, so do not just replace `rdiff` with `copypac`!!! :warning: **
 
 ```bash
 # Example of how packages should be promoted
-
-Warning: :warning: `osc copypac` has swapped parameters with `osc rdiff`, so do not just replace `rdiff` with `copypac`!!! :warning: 
 
 $ osc copypac systemsmanagement:saltstack:products:testing salt systemsmanagement:saltstack:products
 $ osc copypac systemsmanagement:saltstack:products:testing py26-compat-salt systemsmanagement:saltstack:products
