@@ -9,7 +9,15 @@ Once the Salt toaster results are looking GREEN on Jenkins, the following packag
 
 ----
 
-We should always check if diff (changes to be promoted) is correct and expected:
+We should always check if diff (changes to be promoted) is correct and expected.
+
+Your check-list:
+
+- all new entries you've added are there
+- all new patches you've added are there
+- all patches you've removed are also removed
+- nothing else is happening that you didn't do (gets removed or added)
+
 
 ```bash
 # Example of how to show changes that are going to be promoted
