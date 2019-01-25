@@ -38,3 +38,21 @@ $ osc copypac systemsmanagement:saltstack:products:old:testing salt systemsmanag
 ```
 
 **NOTE:** Other packages or dependencies might be also need to be promoted.
+
+After package has been promoted, disabled download on the promoted target will be removed. This should be manually reverted back. Typical example:
+
+```diff
+===================================================================
+--- _service (revision 154)
++++ _service (revision 214)
+@@ -15,7 +15,7 @@
+     <param name="path">saltstack/salt/tar.gz/v2018.3.0</param>
+     <param name="filename">v2018.3.0.tar.gz</param>
+   </service>
+-  <service name="download_url" mode="disabled">
++  <service name="download_url">
+        <param name="protocol">https</param>
+        <param name="host">github.com</param>
+        <param name="path">openSUSE/salt/archive/openSUSE-2018.3.0.tar.gz</param>
+Index: salt.changes
+```
