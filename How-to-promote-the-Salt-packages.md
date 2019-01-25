@@ -33,12 +33,15 @@ Then we can promote the packages:
 ```bash
 # Example of how packages should be promoted
 
+Warning: :warning: `osc copypac` has swapped parameters with `osc rdiff`, so do not just replace `rdiff` with `copypac`!!! :warning: 
+
 $ osc copypac systemsmanagement:saltstack:products:testing salt systemsmanagement:saltstack:products
 $ osc copypac systemsmanagement:saltstack:products:testing py26-compat-salt systemsmanagement:saltstack:products
 $ osc copypac systemsmanagement:saltstack:products:old:testing salt systemsmanagement:saltstack:products:old
 ```
 
 **NOTE:** Other packages or dependencies might be also need to be promoted.
+
 
 After package has been promoted, disabled download on the promoted target will be removed. This should be manually reverted back. Typical example:
 
