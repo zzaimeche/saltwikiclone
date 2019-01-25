@@ -13,6 +13,7 @@ We should always check if diff (changes to be promoted) is correct and expected.
 
 Your check-list:
 
+- all new changelog entries are placed on top of the current ones
 - all new entries you've added are there
 - all new patches you've added are there
 - all patches you've removed are also removed
