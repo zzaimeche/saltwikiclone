@@ -3,6 +3,7 @@ Once the Salt toaster results are looking GREEN on Jenkins, the following packag
 ###### From `products:testing` to `products`:
   - salt
   - py26-compat-salt
+  - py26-compat-tornado
 
 ###### From `products:old:testing` to `products:old`:
   - salt
