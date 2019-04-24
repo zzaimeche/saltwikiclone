@@ -4,6 +4,7 @@ Once the Salt toaster results are looking GREEN on Jenkins, the following packag
   - salt
   - py26-compat-salt
   - py26-compat-tornado
+  - py26-compat-msgpack-python
 
 ###### From `products:old:testing` to `products:old`:
   - salt
@@ -27,6 +28,7 @@ Your check-list:
 $ osc rdiff systemsmanagement:saltstack:products salt systemsmanagement:saltstack:products:testing
 $ osc rdiff systemsmanagement:saltstack:products py26-compat-salt systemsmanagement:saltstack:products:testing
 $ osc rdiff systemsmanagement:saltstack:products py26-compat-tornado systemsmanagement:saltstack:products:testing
+$ osc rdiff systemsmanagement:saltstack:products py26-compat-msgpack-python systemsmanagement:saltstack:products:testing
 $ osc rdiff systemsmanagement:saltstack:products:old salt systemsmanagement:saltstack:products:old:testing
 ```
 
@@ -40,6 +42,7 @@ Then we can promote the packages.
 $ osc copypac systemsmanagement:saltstack:products:testing salt systemsmanagement:saltstack:products
 $ osc copypac systemsmanagement:saltstack:products:testing py26-compat-salt systemsmanagement:saltstack:products
 $ osc copypac systemsmanagement:saltstack:products:testing py26-compat-tornado systemsmanagement:saltstack:products
+$ osc copypac systemsmanagement:saltstack:products:testing py26-compat-msgpack-python systemsmanagement:saltstack:products
 $ osc copypac systemsmanagement:saltstack:products:old:testing salt systemsmanagement:saltstack:products:old
 ```
 
