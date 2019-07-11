@@ -40,6 +40,7 @@ We automated all the necessary steps into a Jenkins pipeline that can be manuall
 
 This pipeline is taking care of:
 - Promote necessary packages from `products:testing` to `products`
+- Promote necessary packages from `products:old:testing` to `products:old`
 - Run services on `products:debian/salt` to refresh the Debian package.
 - Run services for the Ubuntu (16.04 & 18.04) client tools at `Uyuni:Master`
 - Run services for the Ubuntu (16.04 & 18.04) client tools at `Devel:Galaxy:Manager:4.0`
