@@ -11,7 +11,7 @@ Once the Salt toaster results are looking GREEN on Jenkins, the following packag
 
 ----
 
-We should always check if diff (changes to be promoted) is correct and expected.
+**We should always check if diff (changes to be promoted) is correct and expected.**
 
 Your check-list:
 
@@ -32,37 +32,17 @@ osc rdiff systemsmanagement:saltstack:products py26-compat-msgpack-python system
 osc rdiff systemsmanagement:saltstack:products:old salt systemsmanagement:saltstack:products:old:testing
 ```
 
-Then we can promote the packages.
+**If the results from the `rdiff` are looking good, then we can promote the packages.**
 
-:warning: **`osc copypac` CLI syntax has swapped parameters with `osc rdiff`, so do not just replace `rdiff` with `copypac`!**
+We automated all the necessary steps into a Jenkins pipeline that can be manually executed.
 
-```bash
-# Example of how packages should be promoted
+**In order to that, execute: https://ci.suse.de/job/manager-salt-package-promote-pipeline/**
 
-osc copypac systemsmanagement:saltstack:products:testing salt systemsmanagement:saltstack:products
-osc copypac systemsmanagement:saltstack:products:testing py26-compat-salt systemsmanagement:saltstack:products
-osc copypac systemsmanagement:saltstack:products:testing py26-compat-tornado systemsmanagement:saltstack:products
-osc copypac systemsmanagement:saltstack:products:testing py26-compat-msgpack-python systemsmanagement:saltstack:products
-osc copypac systemsmanagement:saltstack:products:old:testing salt systemsmanagement:saltstack:products:old
-```
+This pipeline is taking care of:
+- Promote necessary packages from `products:testing` to `products`
+- Run services on `products:debian/salt` to refresh the Debian package.
+- Run services for the Ubuntu (16.04 & 18.04) client tools at `Uyuni:Master`
+- Run services for the Ubuntu (16.04 & 18.04) client tools at `Devel:Galaxy:Manager:4.0`
+- Run services for the Ubuntu (16.04 & 18.04) client tools at `Devel:Galaxy:Manager:Head`
 
-**NOTE:** Other packages or dependencies might be also need to be promoted.
-
-
-After package has been promoted, disabled download on the promoted target will be removed. This should be manually reverted back. Typical example:
-
-```diff
-===================================================================
---- _service (revision 154)
-+++ _service (revision 214)
-@@ -15,7 +15,7 @@
-     <param name="path">saltstack/salt/tar.gz/v2018.3.0</param>
-     <param name="filename">v2018.3.0.tar.gz</param>
-   </service>
--  <service name="download_url" mode="disabled">
-+  <service name="download_url">
-        <param name="protocol">https</param>
-        <param name="host">github.com</param>
-        <param name="path">openSUSE/salt/archive/openSUSE-2018.3.0.tar.gz</param>
-Index: salt.changes
-```
+**Happy promoting!** :wink: 
