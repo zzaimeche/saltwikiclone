@@ -1,19 +1,36 @@
-Once the Salt toaster results are looking GREEN on Jenkins, the following packages needs to be promoted:
+## Salt Package Promotion Pipeline
+The promotion pipeline is used to &ldquo;promote&rdquo; the OBS package from the `products:testing` project to the `products` project. It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. The `products` project is linked to projects in IBS that are used for releasing SUSE Manager. For this reason we have a separate OBS project that receives submit requests.
 
-###### From `products:testing` to `products`:
+The Jenkins pipeline is defined in [meaksh/salt-package-promote-obs](https://github.com/meaksh/salt-package-promote-obs) (subject to move to the openSUSE GitHub organization).
+
+### What is getting promoted?
+
+All OBS projects listed below live in the `systemsmanagement:saltstack` namespace.
+
+#### From `products:testing` to `products`:
   - salt
   - py26-compat-salt
   - py26-compat-tornado
   - py26-compat-msgpack-python
+-   py27-compat-salt
 
-###### From `products:old:testing` to `products:old`:
+#### From `products:old:testing` to `products:old`:
+  - salt (2016.11.10)
+
+#### From `products:testing:debian` to `products:debian`:
   - salt
 
-----
+#### From `products:testing:debian:python2` to `products:debian:python2`:
+  - salt
 
-**We should always check if diff (changes to be promoted) is correct and expected.**
+#### From `products:testing:debian:python3` to `products:debian:python3`:
+  - salt
 
-Your check-list:
+### Promotion Checklist
+
+The `products:testing` [testsuite](https://ci.suse.de/user/manager/my-views/view/Salt/view/default/) must be green and the diff between the source and destination projects should be correct and as expected.
+
+Your check-list for the diffs:
 
 - all new changelog entries are placed on top of the current ones
 - all new entries you've added are there
@@ -29,14 +46,22 @@ osc rdiff systemsmanagement:saltstack:products salt systemsmanagement:saltstack:
 osc rdiff systemsmanagement:saltstack:products py26-compat-salt systemsmanagement:saltstack:products:testing
 osc rdiff systemsmanagement:saltstack:products py26-compat-tornado systemsmanagement:saltstack:products:testing
 osc rdiff systemsmanagement:saltstack:products py26-compat-msgpack-python systemsmanagement:saltstack:products:testing
+osc rdiff systemsmanagement:saltstack:products py27-compat-salt systemsmanagement:saltstack:products:testing
 osc rdiff systemsmanagement:saltstack:products:old salt systemsmanagement:saltstack:products:old:testing
 ```
 
-**If the results from the `rdiff` are looking good, then we can promote the packages.**
+**If the results from the `osc rdiff` are looking good, then we can promote the packages.**
 
-We automated all the necessary steps into a Jenkins pipeline that can be manually executed.
+### How to run the Promotion Pipeline
 
-**In order to that, execute: https://ci.suse.de/job/manager-salt-package-promote-pipeline/**
+Running the pipeline needs access to [SUSE&rsquo;s Jenkins](https://ci.suse.de). Log in with the SUSE Manager team credentials and navigate to
+[Dashboard > manager-salt-package-promote-pipeline](https://ci.suse.de/job/manager-salt-package-promote-pipeline/build?delay=0sec).
+
+#### Parameters
+
+-   `salt_version`: The Salt version that is currently used in `products` and `products:testing`.
+-   `mu_version`: The Maintenance Update that the newly promoted version will be released in.
+
 
 This pipeline is taking care of:
 - Promote necessary packages from `products:testing` to `products`
