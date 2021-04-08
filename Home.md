@@ -93,7 +93,9 @@ Each of them have an ever-growing number of OBS projects:
   - For Tumbleweed: [systemsmanagement:saltstack:next:testing](https://build.opensuse.org/package/show/systemsmanagement:saltstack:next:testing/salt)
   - For Leap: [systemsmanagement:saltstack:products:next:testing](https://build.opensuse.org/package/show/systemsmanagement:saltstack:products:next:testing/salt)
 
-Since there are so many projects and it is easy to forget which Salt version is being built in each project, we have a small tool that queries OBS: [saltversions](https://github.com/brejoc/saltversions)
+Since there are so many projects and it is easy to forget which Salt version is being built in each project, we have a small tool that queries OBS: [saltversions](https://github.com/brejoc/saltversions).
+
+"Promoting" packages from `systemsmanagement:saltstack:products:testing` to `systemsmanagement:saltstack:products` is done with the use of a Jenkins pipeline. The workflow is documented [here](https://github.com/openSUSE/salt/wiki/How-to-promote-the-Salt-packages).
 
 ## Testing
 
@@ -125,3 +127,4 @@ New tests should only be added in subdirectories of `tests/pytests/`. There is a
 ## Interesting pages
 
 - [py-spy](py-spy): Profiling Python applications
+- [How to promote the Salt packages](https://github.com/openSUSE/salt/wiki/How-to-promote-the-Salt-packages): Package promotion pipeline
