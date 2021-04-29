@@ -12,7 +12,10 @@ All OBS projects listed below live in the `systemsmanagement:saltstack` namespac
   - py26-compat-salt
   - py26-compat-tornado
   - py26-compat-msgpack-python
--   py27-compat-salt
+  - py27-compat-salt
+
+#### From `products:3000:testing` to `products:3000`:
+  - salt
 
 #### From `products:old:testing` to `products:old`:
   - salt (2016.11.10)
@@ -20,11 +23,11 @@ All OBS projects listed below live in the `systemsmanagement:saltstack` namespac
 #### From `products:testing:debian` to `products:debian`:
   - salt
 
-#### From `products:testing:debian:python2` to `products:debian:python2`:
-  - salt
+#### From `products:3000:testing:debian` to `products:3000:debian`:
+  - salt (Python2)
 
-#### From `products:testing:debian:python3` to `products:debian:python3`:
-  - salt
+#### From `products:3000:testing:debian:python3` to `products:3000:debian:python3`:
+  - salt (Python3)
 
 ### Promotion Checklist
 
@@ -33,7 +36,7 @@ The `products:testing` [testsuite](https://ci.suse.de/user/manager/my-views/view
 Your check-list for the diffs:
 
 - all new changelog entries are placed on top of the current ones
-- all new entries you've added are there
+- all new changelog entries you've added are there
 - all new patches you've added are there
 - all patches you've removed are also removed
 - nothing else is happening that you didn't do (gets removed or added)
