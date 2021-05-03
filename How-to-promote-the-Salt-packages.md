@@ -1,33 +1,7 @@
 ## Salt Package Promotion Pipeline
 The promotion pipeline is used to &ldquo;promote&rdquo; the OBS package from the `products:testing` project to the `products` project. It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. The `products` project is linked to projects in IBS that are used for releasing SUSE Manager. For this reason we have a separate OBS project that receives submit requests.
 
-The Jenkins pipeline is defined in [meaksh/salt-package-promote-obs](https://github.com/meaksh/salt-package-promote-obs) (subject to move to the openSUSE GitHub organization).
-
-### What is getting promoted?
-
-All OBS projects listed below live in the `systemsmanagement:saltstack` namespace.
-
-#### From `products:testing` to `products`:
-  - salt
-  - py26-compat-salt
-  - py26-compat-tornado
-  - py26-compat-msgpack-python
-  - py27-compat-salt
-
-#### From `products:3000:testing` to `products:3000`:
-  - salt
-
-#### From `products:old:testing` to `products:old`:
-  - salt (2016.11.10)
-
-#### From `products:testing:debian` to `products:debian`:
-  - salt
-
-#### From `products:3000:testing:debian` to `products:3000:debian`:
-  - salt (Python2)
-
-#### From `products:3000:testing:debian:python3` to `products:3000:debian:python3`:
-  - salt (Python3)
+The Jenkins pipeline is defined in [meaksh/salt-package-promote-obs](https://github.com/meaksh/salt-package-promote-obs) (subject to move to the openSUSE GitHub organization). If you want to learn more about the pipeline in detail, take a look at the [Salt Promotion Interals](https://github.com/openSUSE/salt/wiki/Salt-Promotion-Pipeline-Internals) page.
 
 ### Promotion Checklist
 
