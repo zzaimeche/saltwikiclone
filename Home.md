@@ -24,9 +24,9 @@ Pull Requests @`upstream` **must** have received positive feedback or been merge
 
 The `opensuse` repository contains branches per Salt version that is packaged at OBS. At the time of writing, there are:
 
-- `openSUSE-3000` (default branch)
+- `openSUSE-3000`
 - `openSUSE-3000.3`
-- `openSUSE-3002.2`
+- `openSUSE-3002.2` (default branch)
 - `openSUSE-2016.11.10`
 
 The default branch is the one of the current version in the latest openSUSE Leap and SUSE Linux Enterprise.
