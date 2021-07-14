@@ -1,7 +1,7 @@
 ## Salt Package Promotion Pipeline
 The promotion pipeline is used to &ldquo;promote&rdquo; the OBS package from the `products:testing` project to the `products` project. It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. The `products` project is linked to projects in IBS that are used for releasing SUSE Manager. For this reason we have a separate OBS project that receives submit requests.
 
-The Jenkins pipeline is defined in [meaksh/salt-package-promote-obs](https://github.com/meaksh/salt-package-promote-obs) (subject to move to the openSUSE GitHub organization). If you want to learn more about the pipeline in detail, take a look at the [Salt Promotion Interals](https://github.com/openSUSE/salt/wiki/Salt-Promotion-Pipeline-Internals) page.
+The Jenkins pipeline is defined in [openSUSE/salt-package-promote-obs](https://github.com/openSUSE/salt-package-promote-obs). If you want to learn more about the pipeline in detail, take a look at the [Salt Promotion Interals](https://github.com/openSUSE/salt/wiki/Salt-Promotion-Pipeline-Internals) page.
 
 ### Promotion Checklist
 
