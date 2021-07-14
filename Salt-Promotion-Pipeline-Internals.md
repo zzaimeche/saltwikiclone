@@ -1,6 +1,6 @@
 # Salt Promotion Pipeline Stages
 
-The Jenkins pipeline is defined in [meaksh/salt-package-promote-obs](https://github.commeaksh/salt-package-promote-obs) (subject to move to the openSUSE GitHub organization). This page walks through the stages of the pipeline. Look [here](https://github.com/openSUSE/salt/wiki/How-to-promote-the-Salt-packages) when you want to know how to use it.
+The Jenkins pipeline is defined in [openSUSE/salt-package-promote-obs](https://github.com/openSUSE/salt-package-promote-obs). This page walks through the stages of the pipeline. Look [here](https://github.com/openSUSE/salt/wiki/How-to-promote-the-Salt-packages) when you want to know how to use it.
 
 **Note**: At the time of writing (May 2021), there is the need to maintain, and therefore promote, two Salt versions. The reason for that is that Salt 3002.2 is the main version, but Salt 3000 is still maintained for distributions that do not support 3002.2. This is the case for Distributions that use Python 2.7 or Python 3.4.
 
