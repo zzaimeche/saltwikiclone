@@ -22,11 +22,12 @@ Pull Requests @`upstream` **must** have received positive feedback or been merge
 
 ### Branches
 
-The `opensuse` repository contains branches per Salt version that is packaged at OBS. At the time of writing, there are:
+The `opensuse` repository contains branches per Salt version that is packaged at OBS. Maintained branches are:
 
 - `openSUSE-3000`
 - `openSUSE-3000.3` (used as a Python2.7 compatible codebase for Salt SSH)
 - `openSUSE-3002.2` (default branch)
+- `openSUSE-3003.3` (used for Tumbleweed, candidate for next default)
 - `openSUSE-2016.11.10`
 
 The default branch is the one of the current version in the latest openSUSE Leap and SUSE Linux Enterprise.
