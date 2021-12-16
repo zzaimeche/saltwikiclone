@@ -16,19 +16,19 @@
 | | saltbundlepy-cryptography | [python-cryptography](https://build.opensuse.org/package/show/SUSE:SLE-15-SP2:Update/python-cryptography) | SUSE:SLE-15-SP2:Update |  |
 | | saltbundlepy-cryptography-vectors | [python-cryptography-vectors](https://build.opensuse.org/package/show/SUSE:SLE-15-SP2:GA/python-cryptography-vectors) | SUSE:SLE-15-SP2:GA |  |
 | + | saltbundlepy-cssselect | [python-cssselect](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-cssselect) | SUSE:SLE-15:GA |  |
-| | saltbundlepy-cython | [Python-Cython](https://build.opensuse.org/package/show/openSUSE:Factory/python-Cython) | openSUSE:Factory |  |
+| | saltbundlepy-cython | [python-Cython](https://build.opensuse.org/package/show/openSUSE:Factory/python-Cython) | openSUSE:Factory |  |
 | + | saltbundlepy-distro | [python-distro](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-distro) | SUSE:SLE-15:Update |  |
 | + | saltbundlepy-docker | [python-docker](https://build.opensuse.org/package/show/SUSE:SLE-15-SP2:Update/python-docker) | SUSE:SLE-15-SP2:Update |  |
 | + | saltbundlepy-docker-pycreds | [python-docker-pycreds](https://build.opensuse.org/package/show/SUSE:SLE-15-SP2:Update/python-docker-pycreds) | SUSE:SLE-15-SP2:Update |  |
 | + | saltbundlepy-docopt | [python-docopt](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-docopt) | SUSE:SLE-15:GA |  |
 | + | saltbundlepy-idna | [python-idna](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-idna) | SUSE:SLE-15:GA |  |
 | | saltbundlepy-importlib-metadata | [python-importlib-metadata](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-importlib-metadata) | SUSE:SLE-15-SP1:Update |  |
-| + | saltbundlepy-jinja2 | [Python-Jinja2](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-Jinja2) | SUSE:SLE-15:Update |  |
+| + | saltbundlepy-jinja2 | [python-Jinja2](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-Jinja2) | SUSE:SLE-15:Update |  |
 | + | saltbundlepy-kiwi | [python-kiwi](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-kiwi) | SUSE:SLE-15-SP1:Update |  |
 | + | [saltbundlepy-libvirt](https://build.opensuse.org/package/show/systemsmanagement:saltstack:bundle:SLE15/saltbundlepy-libvirt) | [python-libvirt-python](https://build.opensuse.org/package/show/openSUSE:Factory/python-libvirt-python) | openSUSE:Factory | The package is placed in SLE15 subproject and linked to all SUSE based distros. |
 | + | saltbundlepy-lxml | [python-lxml](https://build.opensuse.org/package/show/openSUSE:Factory/python-lxml) | openSUSE:Factory |  |
-| + | saltbundlepy-m2crypto | [Python-M2Crypto](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-M2Crypto) | SUSE:SLE-15:Update | Additional patches for Python 3.9 applied |
-| + | saltbundlepy-markupsafe | [Python-MarkupSafe](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-MarkupSafe) | SUSE:SLE-15:GA |  |
+| + | saltbundlepy-m2crypto | [python-M2Crypto](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-M2Crypto) | SUSE:SLE-15:Update | Additional patches for Python 3.9 applied |
+| + | saltbundlepy-markupsafe | [python-MarkupSafe](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-MarkupSafe) | SUSE:SLE-15:GA |  |
 | | saltbundlepy-more-itertools | [python-more-itertools](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-more-itertools) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-msgpack | [python-msgpack](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:GA/python-msgpack) | SUSE:SLE-15-SP1:GA | Patch to fix deprecations in the tests applied |
 | | saltbundlepy-netaddr | [python-netaddr](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-netaddr) | SUSE:SLE-15:GA |  |
@@ -44,9 +44,9 @@
 | | saltbundlepy-pycurl | [python-pycurl](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-pycurl) | SUSE:SLE-15:Update |  |
 | + | saltbundlepy-pyinotify | [python-pyinotify](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-pyinotify) | SUSE:SLE-15:Update |  |
 | | saltbundlepy-pynacl | [python-PyNaCl](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-PyNaCl) | SUSE:SLE-15:Update |  |
-| + | saltbundlepy-pyopenssl | [Python-pyOpenSSL](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:GA/python-pyOpenSSL) | SUSE:SLE-15-SP3:GA |  |
+| + | saltbundlepy-pyopenssl | [python-pyOpenSSL](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:GA/python-pyOpenSSL) | SUSE:SLE-15-SP3:GA |  |
 | | saltbundlepy-pyparsing | [python-pyparsing](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:GA/python-pyparsing) | SUSE:SLE-15-SP3:GA |  |
-| + | saltbundlepy-pysocks | [Python-PySocks](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-PySocks) | SUSE:SLE-15:GA | Additional patches for Python 3.9 deprecations fix applied |
+| + | saltbundlepy-pysocks | [python-PySocks](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-PySocks) | SUSE:SLE-15:GA | Additional patches for Python 3.9 deprecations fix applied |
 | | saltbundlepy-pytest | [python-pytest](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-pytest) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-pytz | [python-pytz](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:Update/python-pytz) | SUSE:SLE-15-SP3:Update |  |
 | + | saltbundlepy-pyxattr | [python-pyxattr](https://build.opensuse.org/package/show/openSUSE:Factory/python-pyxattr) | openSUSE:Factory |  |
