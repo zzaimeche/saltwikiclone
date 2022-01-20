@@ -1,7 +1,7 @@
 |  | Package | Original package | Original project | Description |
 | --- | --- | --- | --- | --- |
 | + | saltbundle-libsodium | [libsodium](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/libsodium) | SUSE:SLE-15:Update |  |
-| + | saltbundle-openssl | [openssl](https://build.opensuse.org/package/show/SUSE:SLE-12-SP2:Update/openssl) | SUSE:SLE-12-SP2:Update | Required for SLE12 bulding only as SLE12 GA contains outdated and incompatible with Python 3.9 version of openssl |
+| | saltbundle-openssl | [openssl](https://build.opensuse.org/package/show/SUSE:SLE-12-SP2:Update/openssl) | SUSE:SLE-12-SP2:Update | Required for SLE12 bulding only as SLE12 GA contains outdated and incompatible with Python 3.9 version of openssl |
 | | saltbundle-swig | [swig](https://build.opensuse.org/package/show/openSUSE:Factory/swig) | openSUSE:Factory | Required for binary python modules build for Python 3.9 |
 | + | saltbundle-zeromq | [zeromq](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/zeromq) | SUSE:SLE-15:Update |  |
 | + | saltbundlepy | [python39](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:Update/python39) | SUSE:SLE-15-SP3:Update |  |
