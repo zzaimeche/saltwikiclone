@@ -221,3 +221,8 @@ Assumptions:
 
 * `git push opensuse openSUSE-2015.8.4`
   to push the new branch to opensuse
+****
+
+## Important note
+
+**Please do NOT forget to manually regenerate the** `html.tar.bz2` **every time we do a Salt major version update**: [More info here](Update-documentation-for-%22salt-doc%22-package)
