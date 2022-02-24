@@ -26,7 +26,7 @@
 | | saltbundlepy-importlib-metadata | [python-importlib-metadata](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-importlib-metadata) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-jinja2 | [python-Jinja2](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-Jinja2) | SUSE:SLE-15:Update |  |
 | + | saltbundlepy-kiwi | [python-kiwi](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-kiwi) | SUSE:SLE-15-SP1:Update |  |
-| + | [saltbundlepy-libvirt](https://build.opensuse.org/package/show/systemsmanagement:saltstack:bundle:SLE15/saltbundlepy-libvirt) | [python-libvirt-python](https://build.opensuse.org/package/show/openSUSE:Factory/python-libvirt-python) | openSUSE:Factory | The package is placed in SLE15 subproject and linked to all SUSE based distros. |
+| + | [saltbundlepy-libvirt](https://build.opensuse.org/package/show/systemsmanagement:saltstack:bundle:SLE15/saltbundlepy-libvirt) | [python-libvirt-python](https://build.opensuse.org/package/show/SUSE:SLE-15-SP4:Update/python-libvirt-python) | SUSE:SLE-15-SP4:Update | The package is placed in SLE15 subproject and linked to all SUSE based distros. |
 | + | saltbundlepy-lxml | [python-lxml](https://build.opensuse.org/package/show/openSUSE:Factory/python-lxml) | openSUSE:Factory |  |
 | + | saltbundlepy-m2crypto | [python-M2Crypto](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-M2Crypto) | SUSE:SLE-15:Update | Additional patches for Python 3.9 applied |
 | + | saltbundlepy-markupsafe | [python-MarkupSafe](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-MarkupSafe) | SUSE:SLE-15:GA |  |
