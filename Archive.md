@@ -1,4 +1,8 @@
-## What is Needed
+# Archived Content
+
+## Ubermaster Architecture
+
+### What is Needed
 
 A typical enterprise Data Center (DC) is driven by the [ITSM Change Management](https://en.wikipedia.org/wiki/Change_management_(ITSM)) with a careful planning of the infrastructure. An overview to get the idea how typically services are built at Architecture and Change Management and how process looks like, can be found on [Open Group Portal (PDF)](http://www.opengroup.org/architecture/0404brus/presents/rajesh/aandc1.pdf).
 
@@ -24,7 +28,7 @@ Constantly growing number of managed machines will eventually grow up even more.
 
   Salt should provide access to a different organizations under such setup and isolation between them.
 
-## Full Process Data Limitations
+### Full Process Data Limitations
 
 By "fully processed" it means that three kind of information data state went through the full circle. That is:
 
@@ -34,7 +38,7 @@ By "fully processed" it means that three kind of information data state went thr
 
 With only one Master, Salt hits the limits of amount of machines that can be fully processed within a certain amount of time. So even if Salt Manager will fully process an N amount of minions, it still won't make it to fully process it within _certain period of time_ and therefore won't meet the requirements for the ITSM Change Management.
 
-## Conceptual Architecture
+### Conceptual Architecture
 
 As in any grid/cluster solutions, the complexity needs to be separated into a smaller parts.
 
@@ -53,7 +57,7 @@ Minions can be connected to a multiple Master(s) machines. There are two ways of
 
 The amount of prepared data from Salt for such applications and service is a problem of those applications and services. Salt should _not take care_ if an application is about to collapse, because it is incapable to process prepared data. Solution to this: scale that application. However, Salt _must_ take care of stale/obsolete prepared data and swipe it away if it gets old, so the storage buffer stays always fresh.
 
-## Data Cycle Separation
+### Data Cycle Separation
 
 Salt between the meta-information about jobs done, it also can return a vast amount of data from the Minions. The data in this case is not understood as an information, but just a data for further processing by a 3rd party applications. The first bottleneck to solve is to make sure that the controlling information (i.e. commands and meta-data or a description) is separated from the payload returning response. First stays within ZMQ channel inside the Salt, the second is returned in a storage for _further processing_.
 
@@ -84,7 +88,7 @@ As an example, the layout of the Key/Value store not necessary needs to be on an
 
 Such layout also is flexible for grouping minions, i.e. 1~N child masters per an organization or subnet etc. Essentially, "child master" is not very much different from the existing Syndic. However, it still does not separates the data into a different channels and does not work fully transparent so the minion registration can be done in the control node.
 
-## 3rd Party Application Integration
+### 3rd Party Application Integration
 
 Any service or application that is going to integrate with this setup is either need to cope with the returned amount of data that sits in such Key/Value store as well as provide other 3rd party services to which minions are connected. In any case, integration of the _resulting data_ is not designed to be a realtime as it doesn't have to be. That said, 3rd party applications are essentially controlling/displaying entities, that have the following obligations:
 
@@ -96,17 +100,17 @@ Figure below gives an example how such layout can be achieved:
 
 [[images/integration.png]]
 
-## Multitenancy
+### Multitenancy
 
 Because of the ability to operate multiple Child Masters, the Child Masters are _isolated_ from each other and do not have any connections in between. That said, they are not "talking" to each other, but can be in different LANs, subnets, Data Centers etc. That would allow to have a multi-tenant control node (Ubermaster) that would provide ACL for a different organization that would have an access to their minions as end-points.
 
-## Opened Questions
+### Opened Questions
 
 1. What else could be used except the Redis? See the references for _possible_ alternatives.
 2. Do we need an API in front of any case of #1 (Redis or something else)?
 3. How do we obsolete prepared data for a 3rd party app?
 
-## References
+### References
 
 1. Library for API in front of Redis: [http://python-rq.org](http://python-rq.org)
 2. OpenStack queue: [https://wiki.openstack.org/wiki/Zaqar](https://wiki.openstack.org/wiki/Zaqar)
