@@ -1,5 +1,3 @@
-# Packaging Overview
-
 Our Salt packages are done in the "SUSE traditional way", where patch files are inside the RPM source package. It is not possible to generate a tarball from this repository, because the package **must** provide an original `.tar.gz` source tarball and apply patches *on top of it*.
 
 Since the `diff` between the upstream tarball and in our openSUSE/salt repository can be quite large, we maintain a [separate repository](https://github.com/openSUSE/salt-packaging) with generated `.patch` files. These are generated manually with the help of [git-format-pkg-patch](https://github.com/openSUSE/git-packaging-tools/blob/master/git-format-pkg-patch)

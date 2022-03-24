@@ -1,5 +1,3 @@
-# Archived Content
-
 ## Ubermaster Architecture
 
 ### What is Needed

@@ -1,5 +1,3 @@
-# Meeting Notes
-
 ## oSC 2017 - Meeting with T. Hatch
 
 ### Meeting

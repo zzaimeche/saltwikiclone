@@ -1,5 +1,3 @@
-# Development Environment
-
 ## Git Overview
 
 Salt's source code is managed via [Git](https://git-scm.com/). Basic Git knowledge is assumed, but we have examples of somewhat advanced Git workflows in our [Common Workflows][#common-workflows] section.
