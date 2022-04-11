@@ -53,7 +53,26 @@ This pipeline is taking care of:
 - Run services for the Ubuntu (16.04 & 18.04) client tools at `Devel:Galaxy:Manager:Head`
 
 ## Salt Bundle (venv-salt-minion) Promotion Pipeline
-This other promotion pipeline is used to &ldquo;promote&rdquo; the Salt Bundle OBS package (venv-salt-minion), as well as all the necessary dependencies (saltbundlepy-* packages) from the `systemsmanagement:saltstack:bundle:testing` project to the `systemsmanagement:saltstack:bundle` project, as well as from the corresponding client tools subprojects. It also takes care of promoting changes under the `debbuild` subproject.
+This other promotion pipeline is used to &ldquo;promote&rdquo; the Salt Bundle OBS package (venv-salt-minion), as well as all the necessary Salt Bundle dependencies (saltbundlepy-* packages) from the `systemsmanagement:saltstack:bundle:testing` project to the `systemsmanagement:saltstack:bundle` project.
+
+It also takes care of promoting the packages from the different client tools subprojects as well as the `debbuild` subproject:
+
+- systemsmanagement:saltstack:bundle:testing:AlmaLinux8
+- systemsmanagement:saltstack:bundle:testing:CentOS7
+- systemsmanagement:saltstack:bundle:testing:CentOS8
+- systemsmanagement:saltstack:bundle:testing:Debian10
+- systemsmanagement:saltstack:bundle:testing:Debian11
+- systemsmanagement:saltstack:bundle:testing:Debian9
+- systemsmanagement:saltstack:bundle:testing:Fedora33
+- systemsmanagement:saltstack:bundle:testing:Fedora34
+- systemsmanagement:saltstack:bundle:testing:Fedora35
+- systemsmanagement:saltstack:bundle:testing:Raspbian10
+- systemsmanagement:saltstack:bundle:testing:Raspbian9
+- systemsmanagement:saltstack:bundle:testing:SLE12
+- systemsmanagement:saltstack:bundle:testing:SLE15
+- systemsmanagement:saltstack:bundle:testing:Ubuntu1804
+- systemsmanagement:saltstack:bundle:testing:Ubuntu2004
+- systemsmanagement:saltstack:bundle:testing:debbuild
 
 It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. 
 
