@@ -1,7 +1,11 @@
-## Salt Package Promotion Pipeline
-The promotion pipeline is used to &ldquo;promote&rdquo; the OBS package from the `products:testing` project to the `products` project. It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. The `products` project is linked to projects in IBS that are used for releasing SUSE Manager. For this reason we have a separate OBS project that receives submit requests.
+## Introduction
 
-The Jenkins pipeline is defined in [openSUSE/salt-package-promote-obs](https://github.com/openSUSE/salt-package-promote-obs). If you want to learn more about the pipeline in detail, take a look at the [Salt Promotion Interals](https://github.com/openSUSE/salt/wiki/Salt-Promotion-Pipeline-Internals) page.
+We have automated the process to "promote" our testing changes for Salt into our "stable" projects. We are using Jenkins pipelines for doing these tasks:
+
+## Salt RPM Package Promotion Pipeline
+This promotion pipeline is used to &ldquo;promote&rdquo; the OBS package from the `products:testing` project to the `products` project. It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. The `products` project is linked to projects in IBS that are used for releasing SUSE Manager. For this reason we have a separate OBS project that receives submit requests.
+
+This Jenkins pipeline is defined in [openSUSE/salt-package-promote-obs](https://github.com/openSUSE/salt-package-promote-obs). If you want to learn more about the pipeline in detail, take a look at the [Salt Promotion Interals](https://github.com/openSUSE/salt/wiki/Salt-Promotion-Pipeline-Internals) page.
 
 ### Promotion Checklist
 
@@ -48,4 +52,14 @@ This pipeline is taking care of:
 - Run services for the Ubuntu (16.04 & 18.04) client tools at `Devel:Galaxy:Manager:4.0`
 - Run services for the Ubuntu (16.04 & 18.04) client tools at `Devel:Galaxy:Manager:Head`
 
+## Salt Bundle (venv-salt-minion) Promotion Pipeline
+This other promotion pipeline is used to &ldquo;promote&rdquo; the Salt Bundle OBS package (venv-salt-minion), as well as all the necessary dependencies (saltbundlepy-* packages) from the `systemsmanagement:saltstack:bundle:testing` project to the `systemsmanagement:saltstack:bundle` project, as well as from the corresponding client tools subprojects. It also takes care of promoting changes under the `debbuild` subproject.
+
+It runs in [Jenkins](https://ci.suse.de) and is manually triggered by a member of the Ion Squad. 
+
+This Jenkins pipeline is defined in [openSUSE/salt-package-promote-obs](https://github.com/openSUSE/salt-package-promote-obs).
+
+**NOTE: Please keep in mind this pipeline does not run automatically when running the other pipeline for the Salt RPM package, we need to run this explicitely.**
+
+---
 **Happy promoting!** :wink: 
