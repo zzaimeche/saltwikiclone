@@ -2,7 +2,9 @@
 
 This is the developer documentation for Salt Developers in openSUSE. For user documentation, please take a look at the [upstream Salt docs](https://docs.saltproject.io/en/latest/).
 
-openSUSE's Salt repository is not a fork of [Salt upstream](https://github.com/saltstack/salt). It is a downstream project that moves at a different pace than upstream, with the goal of including **all** added features and bug fixes in upstream releases. We follow an _upstream-first_ approach: All changes to this repository **must** link to a [GitHub Pull Requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests) at [saltstack/salt](https://github.com/saltstack/salt).
+openSUSE's Salt repository is not a fork of [Salt upstream](https://github.com/saltstack/salt). It is a downstream project that moves at a different pace than upstream, with the goal of including **all** added features and bug fixes in upstream releases.
+
+We follow an _upstream-first_ approach: All changes to this repository **must** link to a [GitHub Pull Requests](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests) at [saltstack/salt](https://github.com/saltstack/salt).
 
 ## Resources
 
