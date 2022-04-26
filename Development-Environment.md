@@ -43,9 +43,9 @@ New branches are created by rebasing older patches on top of an `origin` Salt re
 
 ### GitHub Pull Request Policy
 
-There are generally two reasons for opening a Pull Request: adding a new feature or fixing a bug in the existing code base. In both cases, Pull Requests in this repo (`opensuse`) **must** point to one or more Pull Request(s) @`upstream`.
+There are generally two reasons for opening a Pull Request: adding a new feature or fixing a bug in the existing code base. In both cases, Pull Requests in this repo (`opensuse`) **must** point to one or more Pull Request(s) upstream (@`origin`).
 
-Pull Requests @`upstream` **must** have received positive feedback or been merged before they can be accepted. If `upstream` does not agree with a bug fix, try to find a different way that solves the bug. We don't want to carry changes that are not accepted into `upstream`.
+Pull Requests @`origin` **must** have received positive feedback or been merged before they can be accepted. If `origin` does not agree with a bug fix, try to find a different way that solves the bug. We don't want to carry changes that are not accepted into `origin`.
 
 ### Worktrees
 
@@ -66,7 +66,7 @@ With the following steps you can create a git checkout of the Salt repository an
 
 *Step 5 installs Salt's dependencies into the virtual environment. Some of these need additional system libraries. On openSUSE Leap or Tumbleweed, you can install them with `zypper install python3-devel libopenssl-devel libcurl-devel zeromq-devel`*
 
-1. `git clone --origin upstream https://github.com/saltstack/salt && cd $_`
+1. `git clone https://github.com/saltstack/salt salt && cd $_`
 2. `python3 -m venv venv` # the first `venv` is the virtual environment module, the second `venv` is the name of the virtual environment.
 3. `. venv/bin/activate`
 4. `python --version` # Verify the virtual environment is set up and active, `python` should invoke `python3` now
