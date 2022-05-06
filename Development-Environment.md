@@ -41,6 +41,24 @@ The default branch is the one of the current version in the latest openSUSE Leap
 
 New branches are created by rebasing older patches on top of an `origin` Salt release (marked by a Git tag). From then on, they move independently with us backporting bug fixes from newer releases.
 
+### Branch setup
+
+To reduce the number of branches we have on the top level we do want to make use of folders. Folders for Git branches is a concept which many popular Git GUIs implement and it eases the overview in case you have a lot of branches.
+
+The naming schema we follow can be observed in the following list:
+
+```
+master                   --> saltstack/salt master branch
+fix/<name>               --> Upstream fixes
+openSUSE/release/<name>  --> Downstream openSUSE release
+openSUSE/fix/<name>      --> openSUSE specific fixes
+openSUSE/backport/<name> --> openSUSE specific backports
+openSUSE/MU/<release>    --> SUMA MU versions
+<name>                   --> features and misc
+```
+
+> Note: At this point in time the openSUSE/salt repository does not have the fork relationship for saltstack/salt. We will readd this after SUSE Manager 4.3 GA was tagged.
+
 ### GitHub Pull Request Policy
 
 There are generally two reasons for opening a Pull Request: adding a new feature or fixing a bug in the existing code base. In both cases, Pull Requests in this repo (`opensuse`) **must** point to one or more Pull Request(s) upstream (@`origin`).
