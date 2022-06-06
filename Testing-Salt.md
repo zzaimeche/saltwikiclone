@@ -1,6 +1,6 @@
 ## Salt Toaster
 
-We have a tool for running `upstream` integration and unit tests in Docker containers called [Salt Toaster](https://opensuse.github.io/salt-toaster/). Salt Toaster also powers an integration test suite from SUSE. These tests are executed automatically in SUSE's CI. For using Salt Toaster, please consult its [documentation](https://opensuse.github.io/salt-toaster/).
+We have a tool for running `upstream` integration and unit tests in Docker containers called [Salt Toaster](https://github.com/openSUSE/salt-toaster/). Salt Toaster also powers an integration test suite from SUSE. These tests are executed automatically in SUSE's CI. For using Salt Toaster, please consult its [documentation](https://github.com/openSUSE/salt-toaster/).
 
 ## Running in-tree testsuite locally
 
