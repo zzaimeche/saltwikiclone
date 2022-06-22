@@ -2,9 +2,9 @@
 | --- | --- | --- | --- | --- |
 | + | saltbundle-libsodium | [libsodium](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/libsodium) | SUSE:SLE-15:Update |  |
 | | saltbundle-openssl | [openssl](https://build.opensuse.org/package/show/SUSE:SLE-12-SP2:Update/openssl) | SUSE:SLE-12-SP2:Update | Required for SLE12 bulding only as SLE12 GA contains outdated and incompatible with Python 3.9 version of openssl |
-| | saltbundle-swig | [swig](https://build.opensuse.org/package/show/openSUSE:Factory/swig) | openSUSE:Factory | Required for binary python modules build for Python 3.9 |
+| | saltbundle-swig | [swig](https://build.opensuse.org/package/show/openSUSE:Factory/swig) | openSUSE:Factory | Required for binary python modules build for Python 3.10 + contains patch for 3.10 |
 | + | saltbundle-zeromq | [zeromq](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/zeromq) | SUSE:SLE-15:Update |  |
-| + | saltbundlepy | [python39](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:Update/python39) | SUSE:SLE-15-SP3:Update |  |
+| + | saltbundlepy | [python310](https://build.opensuse.org/package/show/SUSE:SLE-15-SP4:Update/python310) | SUSE:SLE-15-SP3:Update |  |
 | + | saltbundlepy-appdirs | [python-appdirs](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-appdirs) | SUSE:SLE-15:GA |  |
 | + | saltbundlepy-apt | - | - | The package is building separately for all Debian based distros as the APT versions used in the distros are different and the module is binary |
 | | saltbundlepy-asn1crypto | [python-asn1crypto](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-asn1crypto) | SUSE:SLE-15:Update |  |
@@ -35,6 +35,7 @@
 | | saltbundlepy-netaddr | [python-netaddr](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-netaddr) | SUSE:SLE-15:GA |  |
 | | saltbundlepy-packaging | [python-packaging](https://build.opensuse.org/package/show/SUSE:SLE-15-SP2:GA/python-packaging) | SUSE:SLE-15-SP2:GA |  |
 | + | saltbundlepy-paramiko | [python-paramiko](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-paramiko) | SUSE:SLE-15-SP1:Update |  |
+| + | saltbundlepy-pip | [python-pip](https://build.opensuse.org/package/show/openSUSE:Factory/python-pip) | openSUSE:Factory |  |
 | | saltbundlepy-pluggy | [python-pluggy](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-pluggy) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-psutil | [python-psutil](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:GA/python-psutil) | SUSE:SLE-15-SP3:GA |  |
 | | saltbundlepy-ptyprocess | [python-ptyprocess](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-ptyprocess) | SUSE:SLE-15:GA |  |
@@ -63,6 +64,7 @@
 | | saltbundlepy-tornado | [python-tornado](https://build.opensuse.org/package/show/SUSE:SLE-15:Update/python-tornado) | SUSE:SLE-15:Update |  |
 | + | saltbundlepy-urllib3 | [python-urllib3](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:Update/python-urllib3) | SUSE:SLE-15-SP3:Update |  |
 | | saltbundlepy-venvjail | [GitHub](https://github.com/openSUSE/venvjail) | - |  |
+| | saltbundlepy-wcwidth | [python-wcwidth](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-wcwidth) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-websocket-client | [python-websocket-client](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-websocket-client) | SUSE:SLE-15-SP1:Update |  |
 | | saltbundlepy-zipp | [python-zipp](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-zipp) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-zypp-plugin | [zypp-plugin](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/zypp-plugin) | SUSE:SLE-15:GA |  |
