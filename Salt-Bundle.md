@@ -35,7 +35,7 @@
 | | saltbundlepy-netaddr | [python-netaddr](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-netaddr) | SUSE:SLE-15:GA |  |
 | | saltbundlepy-packaging | [python-packaging](https://build.opensuse.org/package/show/SUSE:SLE-15-SP2:GA/python-packaging) | SUSE:SLE-15-SP2:GA |  |
 | + | saltbundlepy-paramiko | [python-paramiko](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-paramiko) | SUSE:SLE-15-SP1:Update |  |
-| + | saltbundlepy-pip | [python-pip](https://build.opensuse.org/package/show/openSUSE:Factory/python-pip) | openSUSE:Factory |  |
+| + | saltbundlepy-pip | [python310-pip](https://build.opensuse.org/package/show/SUSE:SLE-15-SP4:Update/python310-pip) | SUSE:SLE-15-SP4:Update |  |
 | | saltbundlepy-pluggy | [python-pluggy](https://build.opensuse.org/package/show/SUSE:SLE-15-SP1:Update/python-pluggy) | SUSE:SLE-15-SP1:Update |  |
 | + | saltbundlepy-psutil | [python-psutil](https://build.opensuse.org/package/show/SUSE:SLE-15-SP3:GA/python-psutil) | SUSE:SLE-15-SP3:GA |  |
 | | saltbundlepy-ptyprocess | [python-ptyprocess](https://build.opensuse.org/package/show/SUSE:SLE-15:GA/python-ptyprocess) | SUSE:SLE-15:GA |  |
