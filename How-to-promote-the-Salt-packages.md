@@ -80,5 +80,24 @@ This Jenkins pipeline is defined in [openSUSE/salt-package-promote-obs](https://
 
 **NOTE: Please keep in mind this pipeline does not run automatically when running the other pipeline for the Salt RPM package, we need to run this explicitely.**
 
+## Releasing Salt in SLE
+Once the packages are promoted to `products`, our SUSE Manager Release Engineer iS taking care of creating the necessary Maintenance Requests (MRs) against SUSE Maintenance as part of the tasks for the next Maintenance Update (MU) for some of the release codestream, but not for all of them.
+
+The Salt Maintainers **needs to take care of creating the MRs in IBS** for the following codestreams as soon as they get pinged by our Release Engineer at the preparing the MU submissions:
+
+- SUSE:SLE-15-SP1:Update
+- SUSE:SLE-15-SP2:Update
+- SUSE:SLE-15-SP3:Update
+- SUSE:SLE-15-SP4:Update
+
+In order to do that we need to do the following for each codestream:
+
+1) Create a branch of the target codestream in IBS.
+2) Change "_service" file and adjust `revision` to the corresponding MU branch. Like `MU-4.3.1`. (to avoid getting patches that might be already pushed to testing)
+3) Run disabled services: `iosc service disabled run`.
+4) Add the new patches and review the generated changelog entry.
+5) Revert changes for "_service" file: `iosc revert _service`.
+6) Commit the changes and then create MR with `iosc mr`.
+
 ---
 **Happy promoting!** :wink: 
