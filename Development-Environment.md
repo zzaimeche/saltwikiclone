@@ -31,9 +31,9 @@ git fetch --all
 
 On `origin`, the only branch we work with is `master`. On `opensuse` however, we maintain a branch for each Salt version we package and support:
 
-- `openSUSE-3000` (SLE 12)
-- `openSUSE-3000.3` (used as a Python2.7 compatible codebase for Salt SSH)
-- `openSUSE-3004` (default branch)
+- `openSUSE/release/3000` (SLE 12)
+- `openSUSE/release/3000.3` (used as a Python2.7 compatible codebase for Salt SSH)
+- `openSUSE/release/3004` (default branch)
 
 The default branch is the one of the current version in the latest openSUSE Leap and SUSE Linux Enterprise.
 
