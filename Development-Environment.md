@@ -80,13 +80,13 @@ Virtual environments are isolated environments that can be used to keep all Pyth
 
 With the following steps you can create a git checkout of the Salt repository and a virtual environment called `venv` inside of it.
 
-*Step 5 installs Salt's dependencies into the virtual environment. Some of these need additional system libraries. On openSUSE Leap or Tumbleweed, you can install them with `zypper install python3-devel libopenssl-devel libcurl-devel zeromq-devel`*
+*Step 5 installs Salt's dependencies into the virtual environment. Some of these need additional system libraries. On openSUSE Leap or Tumbleweed, you can install them with `zypper install python3-devel libopenssl-devel libcurl-devel libffi-devel zeromq-devel`*
 
 1. `git clone https://github.com/saltstack/salt salt && cd $_`
 2. `python3 -m venv venv` # the first `venv` is the virtual environment module, the second `venv` is the name of the virtual environment.
 3. `. venv/bin/activate`
 4. `python --version` # Verify the virtual environment is set up and active, `python` should invoke `python3` now
-5. `python -m pip install -r requirements/base.txt -r requirements/tests.txt -r requirements/pytest.txt -r requirements/crypto.txt -r requirements/zeromq.txt`
+5. `python -m pip install -r requirements/base.txt -r requirements/pytest.txt -r requirements/crypto.txt -r requirements/zeromq.txt`
 6. (Optional) `python -m pip install nox` # needed for running tests
 7. Hack, hack, hack
 8. `deactivate`
